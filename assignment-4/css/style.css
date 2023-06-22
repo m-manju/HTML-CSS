@@ -56,7 +56,8 @@ h3{
     display: block;
 }
 .icons a{
-    text-decoration: none; 
+    text-decoration: none;
+    color: black; 
 }
 .navigation .icons{
     padding: 38px 60px 0 0;
