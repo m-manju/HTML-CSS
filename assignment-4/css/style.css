@@ -55,6 +55,9 @@ h3{
     font-size: 22px;
     display: block;
 }
+.icons a{
+    text-decoration: none; 
+}
 .navigation .icons{
     padding: 38px 60px 0 0;
     cursor: pointer;
