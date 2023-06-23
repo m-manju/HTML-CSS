@@ -727,17 +727,16 @@ footer li a{
         padding-left: 50px;
     }
     .marker {
-        width: 140px;
+        width: 100px;
         height: 40px;
     }
     .marker::after {
-        bottom: -125px;
+        bottom: -105px;
         width: 1.5px;
     } 
     .footercls{
         flex-direction: column;
         align-items: center;
-        justify-content: center;
     }
     footer h3 ,footer h5{
         margin: auto;
@@ -745,12 +744,13 @@ footer li a{
     }
     footer li{
         padding: 4px 0px;
+        text-align: center;
     }
     footer .cls-li{
         padding-top: 30px;
     }
     .fa-instagram{
-        padding-left: 0px;
+        padding-left: 40px;
     }  
 }
 @media (max-width: 510px){
@@ -778,6 +778,9 @@ footer li a{
 }
 
 @media (max-width: 410px){
+    .banner p{
+        font-size: 16px;
+    }
     .experience img{
         padding-left: 0;
         width: 300px;
@@ -819,4 +822,8 @@ footer li a{
     .experienceNumsDetail{
         padding: 30px 30px 30px 0 ;
     }
+    .marker::after {
+        bottom: -160px;
+        height: 145px;
+    } 
 }
