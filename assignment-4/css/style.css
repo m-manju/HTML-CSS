@@ -867,6 +867,10 @@ footer li a{
     }.benefits-group {
         padding: 0px 0 20px 30px;
     }
+    .marker::after {
+        bottom: -130px;
+        height: 125px;
+    }
 }
 @media (max-width: 360px){
     .navigation ul li{
