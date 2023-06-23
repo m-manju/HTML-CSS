@@ -805,9 +805,9 @@ footer li a{
         padding: 0 20px;
     }
 }
-@media (max-width: 445px){
+@media (max-width: 447px){
     .navigation .icons{
-        padding: 38px 0 0 330px;
+        padding: 38px 0 0 350px;
     } 
     .navigation ul li{
         padding-left: 10px;
@@ -845,9 +845,9 @@ footer li a{
         padding: 30px 30px 30px 0 ;
     }
 }
-@media (max-width: 390px){
+@media (max-width: 395px){
     .navigation .icons{
-        padding: 38px 0 0 290px;
+        padding: 38px 0 0 300px;
     }
     .banner img{
         height: 450px;
