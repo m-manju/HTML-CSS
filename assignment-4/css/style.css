@@ -6,6 +6,7 @@
 .container{
     max-width: 1350px;
     margin: 0 auto; 
+    /* background-color: bisque; */
 }
 .font-mono{
     font-family: monospace;
@@ -20,16 +21,6 @@ p{
 }
 h3{
     font-size: 23px;
-}
-/* Responsive Design */
-@media (max-width: 760px){
-    h2{
-        font-size: 22px;
-    }
-    p{
-        font-size: 13px;
-        line-height: 1.4;
-    } 
 }
 /* ------- Navigation part starts here ---------- */
 .navigation{
@@ -55,6 +46,10 @@ h3{
     font-size: 22px;
     display: block;
 }
+.navigation ul li a:hover{
+    color: white;
+    background-color: black;
+}
 .icons a{
     text-decoration: none;
     color: black; 
@@ -66,64 +61,13 @@ h3{
 .icons .fas{
     padding-right: 40px;
 }
-
-@media (max-width: 1000px){
-    .navigation p{
-        padding: 30px 0 0 30px;
-    }
-    .navigation .icons{
-        padding: 38px 20px 0 0;
-    }
-    .icons .fas{
-        padding-right: 20px;
-    }
-    .navigation ul li{
-        padding-right:30px ;
-    }
-}
-
-@media (max-width: 760px){
-    .navigation{
-        flex-wrap: wrap;
-    }
-    .navigation .logo, .navigation .nav-links , .navigation .icons{
-      text-align: center;
-    }
-    .links{
-        flex-wrap: wrap;
-        margin-left: 20px;  
-    } 
-    .nav-links{
-        position: absolute;
-        background: #dbe8ee;
-        height: 55vh;
-        width: 200px;
-        right: 0;
-        text-align: left;
-        z-index: 4;
-        transition: 1s;
-    }
-    .nav-links ul li a{
-        color: #5a6e79;
-        padding: 6px;
-    }
-}
-@media (max-width: 680px){
-    .links{
-        margin-left: 10px;  
-    } 
-    .nav-links{
-        height: 45vh;
-        width: 120px;
-    }
-}
 /* --------- banner section starts here ------ */
 .banner-borderbox{
     width: 100px;
     height: 100px;
     position: relative;
     top: 530px;
-    left: 200px;
+    margin-left: 15%;
     border: 3px solid black;
     z-index: 1;
 }
@@ -143,11 +87,10 @@ h3{
     position: absolute;
     z-index: 3;
 }
- .banner-txtbox h1, .banner-txtbox p{
+.banner-txtbox h1, .banner-txtbox p{
     color: #fff;
     line-height: 1.4;
 }
-
 .banner-txtbox h1{
     font-size: 36px;
 }
@@ -163,25 +106,13 @@ h3{
     background-color: #5a6e79;
     position: relative;
     bottom: 70px;
-    left: 550px;
+    margin-left: 87%;
     z-index: 3;
 }
 .banner-greybox .fas{
     color: #fff;
     padding: 30% 42%;
     font-size: 33px;
-}
-/* Responsive Design */
-@media (max-width: 1200px){
-    .banner img{
-        height: 550px;
-    }
-    /* .banner-greybox{
-        display: none;
-    }
-    .banner-borderbox{
-       display: none;
-    } */
 }
 /* ----------Benefits section starts here ---------- */
 .benefits{
@@ -222,21 +153,6 @@ h3{
 .benefits-txt h3{
     font-size: 24px;
     padding-bottom: 30px;
-}
-@media(max-width: 760px){
-    .benefits h2{
-        padding: 0  0 30px 70px;
-    }
-    .benefits-group{
-        flex-direction: column;
-        padding: 0px 0 20px 60px;
-    }
-    .line::after {
-        display: none;
-    }
-    .benefitsHere{
-        padding: 10px 70px 20px 0;
-    }
 }
 /* --------Experience section starts here ---------- */
 .experience{
@@ -286,28 +202,6 @@ h3{
     right: 3%;
     margin-top: 25px;
 }
-@media(max-width: 760px){
-    .experience{
-        padding: 40px 60px;
-    }
-    .experience-box{
-        flex-direction: column;
-    }
-    .experience img{
-        width: 370px;
-        height: 400px;
-    }
-    .experience-cntnt{
-        padding: 40px 0 0 0px;
-    }
-    .experienceNumsDetail h3{
-        font-size: 50px;
-    }
-    .experience-button img{
-        width: 40px;
-        height: 30px;
-    }
-}
 /* -------- Process Section starts here ------------- */
 .process{
     display: flex;
@@ -321,10 +215,19 @@ h3{
 }
 .process h3{
     padding-bottom: 10px;
+    line-height: 2;
+    padding-top: 25px;
 }
 .process p{
     line-height: 1.6;
-    font-size: 18px !important;
+}
+.process img{
+    height: 650px;
+    width: 700px !important;
+    padding: 0 120px 0 50px;
+}
+.process h2{
+    padding-bottom: 20px;
 }
 .timeline-item {
     display: flex;
@@ -332,7 +235,7 @@ h3{
 }
 .marker {
     position: relative;
-    width: 40px;
+    width: 90px;
     height: 40px;
     background-color: #5a6e79;
     border-radius: 50%;
@@ -359,33 +262,7 @@ h3{
     margin-left: 20px;
     margin-top: -30px;
 }
-.process img{
-    width: 550px;
-    height: 620px;
-    padding-left: 30px;
-}
-.process h3{
-    line-height: 2;
-    padding-top: 25px;
-}
-.process h2{
-    padding-bottom: 20px;
-}
- .process p{ 
-    font-size: 15px;
-}
-/* Responsive Design */
-@media(max-width: 760px){
-    .process{
-        padding-left: 60px;
-        flex-direction: column;
-    }
-    .process img{
-        width: 450px;
-        height: 520px;
-        padding-left: 10px;
-    }
-}
+
 /* -------- Review section starts here -------- */
 .reviews{
     padding-top: 50px;
@@ -442,22 +319,6 @@ h3{
     position: relative;
     right: 15%;
 }
-/* responsive design */
-@media (max-width: 760px){
-    .reviews{
-        padding-top: 0px;
-    }
-    .reviews h2{
-        padding: 30px 100px;
-    }
-    .reviewSection{
-        flex-direction: column;
-        padding-left: 60px;
-    }
-    .reviewSecList{
-        margin-bottom: 20px;
-    }
-}
 /* --------- subscribe section starts here ------------ */
 .subscribeTitle h2{
     text-align: center;
@@ -491,26 +352,11 @@ h3{
     margin-left: 30px;
     margin-right: 110px;
 }
-@media (max-width: 760px){
-    .subscribeButton{
-        flex-direction: column;
-        width: 70%;
-    }
-    .subscribeButton button{
-        padding: 3px 30px;
-        width: 160px;
-        margin: auto;
-    }
-    .subscribeButton p{
-        margin: auto;
-    }
-}
 /* --------footer starts here ----------- */
 footer{
     background-color: #5a6e79;
     margin-top: 40px;
     padding-bottom: 60px;
-    /* width: 100%; */
 }
 .footercls{
     display: flex;
@@ -551,8 +397,335 @@ footer li a{
 .fa-instagram{
     padding-left: 40px;
 }
-/* responsive design */
-@media(max-width: 760px){
+
+/* ------------------------------RESPONSIVE DESIGN ---------------------------------- */
+@media (max-width: 1100px){
+    .navigation p{
+        padding: 30px 0 0 30px;
+    }
+    .navigation .icons{
+        padding: 38px 20px 0 0;
+    }
+    .icons .fas{
+        padding-right: 20px;
+    }
+    .navigation ul li{
+        padding-right:30px ;
+    }
+    .banner-greybox{
+        width: 100px;
+        height: 80px;
+        margin-left: 84%;
+    }
+    .experience p{
+        font-size: 16px;
+     }
+     .experience h3{
+        font-size: 40px;
+     }
+     .experience-button img{
+         display: none;
+     }
+    .experience .experience-box{
+        flex-direction: column;
+    }
+    .experience{
+        padding-top: 30px;
+    }
+    .experience-cntnt{
+        padding: 10px 0 0 0;
+    }
+    .experience-cntnt p{
+        line-height: 1.6;
+    }
+    .experience h2{
+        padding-top: 40px;
+    }
+    .process{
+        flex-direction: column;
+        padding: 50px 60px 0 100px;
+    }
+    .processList h2{
+        padding-bottom: 50px !important;
+    }
+    .process img{
+        height: 650px;
+        padding: 0 120px 0 50px;
+    }
+    .process h2{
+        padding-bottom: 20px;
+    }
+    .timeline-item {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    .marker {
+        width: 60px;
+        height: 40px;
+    } 
+    .content {
+        margin-left: 20px;
+        margin-top: -30px;
+    }
+    .marker::after {
+        bottom: -90px;
+        width: 1.5px;
+        height: 80px;
+    } 
+    .reviews h2{
+        padding: 60px 90px;
+    }
+    .reviewSection{
+        padding-left: 90px;
+    }
+    footer h3 , footer h5{
+        margin-left: 60px;
+    }
+    footer h5{
+        padding-right: 0;
+    }
+    footer li{
+        padding: 6px 30px;
+    }
+    .fab{
+        padding: 20px 10px;
+    }
+    .fa-instagram{
+        padding-left: 20px;
+    }
+}
+@media (max-width: 800px){
+    .line::after {
+        width: 120px;
+        margin: 35px 0 0 60px;
+    }
+    .benefits h2{
+        padding: 0px  0 30px 30px;
+    }
+    .benefits-group{
+        padding: 30px 0 20px 60px;
+    }
+    .benefitsHere img{
+        width: 30px;
+        height: 30px;
+    }
+    .benefitsHere .truck{
+        width: 60px;
+        height: 30px;
+        margin-left: -20px;
+    }
+    .benefits-txt{
+        margin-left: 10px;
+    }
+    .benefits-txt h3{
+        font-size: 20px;
+    }
+    .experience{
+        padding: 50px 60px;
+    }
+    .experience-cntnt{
+        padding: 10px 0 0 0px;
+    }
+    .process{
+        padding: 50px 0 0 60px;
+    }
+    .process img{
+        padding: 0 120px 0 0px;
+    }
+    .marker {
+        width: 50px;
+        height: 40px;
+    }
+    .marker::after {
+        bottom: -95px;
+        height: 90px;
+    } 
+    .reviews h2{
+        padding: 60px 60px;
+    }
+    .reviewSection{
+        padding-left: 60px;
+    }
+}
+ @media (max-width: 760px){
+    .line::after {
+        width: 100px;
+        margin: 35px 0 0 30px;
+    }
+    .benefits-group{
+        padding: 30px 0 20px 30px;
+    }
+    .benefits h2{
+        padding: 0  0 30px 30px;
+    }
+    .benefits-group{
+        flex-direction: column;
+        padding: 0px 0 20px 60px;
+    }
+    .experience{
+        padding: 50px 30px;
+    }
+    .experience img{
+        height: 350px;
+        padding: 0 0 0 30px;
+    }
+    .process{
+        padding: 50px 0 0 30px;
+    }
+    .process img{
+        height: 350px;
+        width: 360px !important;
+        padding: 0 0 0 50px;
+    }
+    .reviewSection{
+        flex-direction: column;
+        padding-left: 60px;
+    }
+    .reviewSecList{
+        margin-bottom: 20px;
+    }
+    .subscribeButton{
+        flex-direction: column;
+        width: 70%;
+    }
+    .subscribeButton button{
+        padding: 3px 30px;
+        width: 160px;
+        margin: auto;
+    }
+    .subscribeButton p{
+        margin: auto;
+    }
+    .reviews h2{
+        padding: 60px 30px;
+    }
+    .reviewSection{
+        padding-left: 30px;
+    }
+    footer h3 , footer h5{
+       margin-left: 20px;
+    }
+    footer li{
+        padding: 6px 25px;
+    }
+    footer li a{
+        font-size: 13px;
+    }
+    .fab{
+        font-size: 20px;
+        padding: 10px 2px;
+    }
+    .fa-instagram{
+        padding-left: 20px;
+    }
+}
+@media (max-width: 660px){
+    h1{
+        font-size: 26px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    p{
+        font-size: 17px;
+        line-height: 1.4;
+    } 
+    .navigation{
+        height: 150px;
+        flex-direction: column;
+    }
+    .navigation ul li{
+        padding-left: 20px;
+        margin: auto;
+    }
+    .navigation ul li a{
+        font-size: 18px;
+    }
+    .navigation .icons{
+        padding: 38px 0 0 400px;
+        position: relative;
+        top: -115px;
+    }
+    .icons .fas{
+        padding-right: 10px;
+    }
+    .banner-borderbox{
+        top: 410px;
+        margin-left: 12%;
+    }
+    .banner-greybox{
+        margin-left: 80%;
+    }
+    .banner img{
+        height: 460px;
+    }
+    .banner .banner-txtbox{
+        width: 400px;
+        height: 270px;
+    }
+    .banner-txtbox h1, .banner-txtbox p{
+        line-height: 1.2;
+    }
+    .banner-txtbox h1{
+        font-size: 33px;
+    }
+    .banner-txtbox p{
+        font-size: 18px;
+    }
+    .banner-txtbox .banner-txt{
+        padding: 30px 50px;
+    } 
+    .benefits h2{
+        padding: 0  0 30px 30px;
+    }
+    .benefits-group{
+        flex-direction: column;
+        padding: 0px 0 20px 60px;
+    } 
+ }
+ @media (max-width: 560px){
+    .navigation ul li{
+        padding-right:10px ;
+    }
+    .banner-borderbox{
+        display: none;
+    }
+    .banner img{
+        width: 100%;
+        height: 500px;
+        margin-top: 0px;
+        margin-left: 0%;
+    }
+    .banner .banner-txtbox{
+        width: 100%;
+        height: fit-content;
+        top: 250px;
+    }
+    .banner-txtbox h1, .banner-txtbox p{
+        line-height: 1.4;
+    }
+    .banner-txtbox h1{
+        font-size: 30px;
+    }
+    .banner-txtbox .banner-txt{
+        padding: 30px 30px;
+    } 
+    .banner-greybox{
+        width: 100px;
+        height: 80px;
+        bottom: 50px;
+        margin: auto;
+    }
+    .banner-greybox .fas{
+        padding: 25% 42%;
+        font-size: 30px;
+    }
+    .benefits .line::after{
+        display: none;
+    }
+    .benefits h2{
+        padding-left: 50px;
+    }
     .footercls{
         flex-direction: column;
         align-items: center;
@@ -571,4 +744,136 @@ footer li a{
     .fa-instagram{
         padding-left: 0px;
     }
+
+    /* .benefitsHere{
+        padding: 10px 70px 20px 0;
+    }
+   .experience{
+        padding: 40px 0 0 50px;
+    } /* 
+    .experience-cntnt{
+        padding: 40px 0 0 0px;
+    }
+    .experienceNumsDetail h3{
+        font-size: 50px;
+    }
+    .experience-button img{
+        width: 40px;
+        height: 30px;
+    }
+    .experienceNumsDetail{
+        padding: 30px 45px 30px 0 ;
+    }
+    .process{
+        padding-left: 40px;
+        flex-direction: column;
+    }*//*
+    .process img{
+        width: 450px;
+        height: 520px;
+        padding-left: 10px;
+    }
+    .reviews{
+        padding-top: 0px;
+    }
+    .reviews h2{
+        padding: 30px 100px;
+    }*/
+    
+    
 }
+@media (max-width: 510px){
+    .navigation ul li{
+        padding-left: 10px;
+    }
+    .navigation ul li a{
+        font-size: 16px;
+    }
+    .navigation .icons{
+        padding: 38px 0 0 300px;
+    }
+    .icons .fas{
+        padding-right: 10px;
+    }
+    .experience img{
+        width: 350px;
+        height: 300px;
+    }
+    .process img{
+        width: 350px ;
+        height: 280px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 410px){
+    .experience img{
+        padding-left: 0;
+        width: 300px;
+        height: 280px;
+    }
+    .process img{
+        width: 300px !important;
+    }
+    .experience h3{
+        font-size: 30px;
+    }
+}
+/*
+@media (max-width: 450px){
+    .navigation ul li{
+        padding-right:10px ;
+    }
+    .banner-borderbox{
+        display: none;
+    }
+    .banner img{
+        width: 100%;
+        height: 500px;
+        margin-top: 0px;
+        margin-left: 0%;
+    }
+    .banner .banner-txtbox{
+        width: 100%;
+        height: fit-content;
+        top: 250px;
+    }
+    .banner-txtbox h1, .banner-txtbox p{
+        line-height: 1.4;
+    }
+    .banner-txtbox h1{
+        font-size: 30px;
+    }
+    .banner-txtbox .banner-txt{
+        padding: 30px 30px;
+    } 
+    .banner-greybox{
+        width: 100px;
+        height: 80px;
+        bottom: 50px;
+        margin: auto;
+    }
+    .banner-greybox .fas{
+        padding: 25% 42%;
+        font-size: 30px;
+    }
+    .experience img{
+        width: 250px;
+        height: 300px;
+        margin: auto;
+    }
+    .experienceNumsDetail h3{
+        font-size: 30px;
+    }
+    .experience-button img{
+        display: none;
+    }
+    .experienceNumsDetail{
+        padding: 30px 40px 30px 0 ;
+    } 
+    .process img{
+        width: 260px;
+        height: 320px;
+        margin: auto;
+    }
+}/* 
