@@ -804,6 +804,9 @@ footer li a{
     .process .processList {
         padding: 0 20px;
     }
+    .experience-cntnt p {
+        line-height: 1.4;
+    }
 }
 @media (max-width: 447px){
     .navigation .icons{
