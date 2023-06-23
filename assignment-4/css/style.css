@@ -726,6 +726,14 @@ footer li a{
     .benefits h2{
         padding-left: 50px;
     }
+    .marker {
+        width: 140px;
+        height: 40px;
+    }
+    .marker::after {
+        bottom: -125px;
+        width: 1.5px;
+    } 
     .footercls{
         flex-direction: column;
         align-items: center;
@@ -743,44 +751,7 @@ footer li a{
     }
     .fa-instagram{
         padding-left: 0px;
-    }
-
-    /* .benefitsHere{
-        padding: 10px 70px 20px 0;
-    }
-   .experience{
-        padding: 40px 0 0 50px;
-    } /* 
-    .experience-cntnt{
-        padding: 40px 0 0 0px;
-    }
-    .experienceNumsDetail h3{
-        font-size: 50px;
-    }
-    .experience-button img{
-        width: 40px;
-        height: 30px;
-    }
-    .experienceNumsDetail{
-        padding: 30px 45px 30px 0 ;
-    }
-    .process{
-        padding-left: 40px;
-        flex-direction: column;
-    }*//*
-    .process img{
-        width: 450px;
-        height: 520px;
-        padding-left: 10px;
-    }
-    .reviews{
-        padding-top: 0px;
-    }
-    .reviews h2{
-        padding: 30px 100px;
-    }*/
-    
-    
+    }  
 }
 @media (max-width: 510px){
     .navigation ul li{
@@ -816,64 +787,36 @@ footer li a{
         width: 300px !important;
     }
     .experience h3{
-        font-size: 30px;
+        font-size: 20px;
+    }
+    .experienceNumsDetail{
+        padding: 30px 30px 30px 0 ;
     }
 }
-/*
-@media (max-width: 450px){
+@media (max-width: 330px){
     .navigation ul li{
-        padding-right:10px ;
+        padding-left: 10px;
     }
-    .banner-borderbox{
-        display: none;
+    .navigation ul li a{
+        font-size: 16px;
     }
-    .banner img{
-        width: 100%;
-        height: 500px;
-        margin-top: 0px;
-        margin-left: 0%;
+    .navigation .icons{
+        padding: 38px 0 0 230px;
     }
-    .banner .banner-txtbox{
-        width: 100%;
-        height: fit-content;
-        top: 250px;
-    }
-    .banner-txtbox h1, .banner-txtbox p{
-        line-height: 1.4;
-    }
-    .banner-txtbox h1{
-        font-size: 30px;
-    }
-    .banner-txtbox .banner-txt{
-        padding: 30px 30px;
-    } 
-    .banner-greybox{
-        width: 100px;
-        height: 80px;
-        bottom: 50px;
-        margin: auto;
-    }
-    .banner-greybox .fas{
-        padding: 25% 42%;
-        font-size: 30px;
+    .icons .fas{
+        padding-right: 10px;
     }
     .experience img{
         width: 250px;
-        height: 300px;
-        margin: auto;
+        height: 200px;
     }
-    .experienceNumsDetail h3{
-        font-size: 30px;
+    .process img{
+        width: 250px !important;
     }
-    .experience-button img{
-        display: none;
+    .experience h3{
+        font-size: 20px;
     }
     .experienceNumsDetail{
-        padding: 30px 40px 30px 0 ;
-    } 
-    .process img{
-        width: 260px;
-        height: 320px;
-        margin: auto;
+        padding: 30px 30px 30px 0 ;
     }
-}/* 
+}
