@@ -444,9 +444,6 @@ footer li a{
         flex-direction: column;
         padding: 50px 60px 0 100px;
     }
-    .processList h2{
-        padding-bottom: 50px !important;
-    }
     .process img{
         height: 650px;
         padding: 0 120px 0 50px;
@@ -696,6 +693,7 @@ footer li a{
         margin-left: 0;
     }
     .banner .banner-txtbox{
+        width: fit-content;
         height: fit-content;
         top: 250px;
     }
@@ -806,6 +804,9 @@ footer li a{
     }
     .icons .fas{
         padding-right: 10px;
+    }
+    .banner .banner-txtbox{
+        width: 100%;
     }
     .experience img{
         width: 250px;
