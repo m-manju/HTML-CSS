@@ -586,6 +586,9 @@ footer li a{
     .experience img{
         height: 300px;
     }
+    .experience h2 {
+        padding-top: 30px;
+    }
     .process {
         padding: 40px 50px 0 50px;
     }
