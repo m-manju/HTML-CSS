@@ -667,7 +667,7 @@ footer li a{
         line-height: 1.4;
     } 
     .navigation{
-        height: 150px;
+        height: 120px;
         flex-direction: column;
     }
     .navigation ul li:first-child{
@@ -697,7 +697,7 @@ footer li a{
     }
     .banner .banner-txtbox{
         width: 400px;
-        height: 270px;
+        height: 250px;
     }
     .banner-txtbox h1, .banner-txtbox p{
         line-height: 1.2;
@@ -746,8 +746,14 @@ footer li a{
    }
 }
 @media (max-width: 560px){
+    .navigation ul {
+        padding-top: 30px;
+    }
+    .navigation p {
+        padding: 20px 0 0 50px;
+    }
     .navigation .icons{
-        padding: 38px 0 0 470px;
+        padding: 30px 0 0 470px;
     }
     .banner-borderbox{
         display: none;
@@ -761,7 +767,7 @@ footer li a{
     .banner .banner-txtbox{
         width: 100%;
         height: fit-content;
-        top: 450px;
+        top: 410px;
     }
     .banner-txtbox h1, .banner-txtbox p{
         line-height: 1.4;
@@ -781,7 +787,7 @@ footer li a{
         font-size: 30px;
     }
     .benefits{
-        padding-top: 360px;
+        padding-top: 350px;
     }
     .experienceNumsDetail {
         padding: 10px 10px 10px 0;
