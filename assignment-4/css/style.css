@@ -121,7 +121,7 @@ h3{
     content: "";
     display: block;
     width: 140px;
-    margin: 80px 30px 0 100px;
+    margin: 80px 30px 0 90px;
     border-bottom: 4px solid black;
 }
 .benefits h2{
@@ -841,6 +841,9 @@ footer li a{
     .marker::after {
         bottom: -80px;
         height: 70px;
+    }
+    footer {
+        padding-bottom: 20px;
     }
     .footercls{
         flex-direction: column;
