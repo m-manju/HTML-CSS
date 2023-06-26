@@ -915,25 +915,46 @@ footer li a{
 @media (max-width: 400px){
     .navigation p{
         padding-left: 20px;
+        font-size: 20px;
     }
     .navigation ul li{
         padding-left: 0;
         padding-right: 20px;
+        font-size: 20px;
     }
     .navigation ul li:first-child {
         padding-left: 20px;
     }
     .navigation .icons{
         padding: 38px 0 0 280px;
+        font-size: 16px;
     } 
+    .banner h1{
+        font-size: 25px;
+    }
+    .banner p{
+        font-size: 16px;
+    }
     .benefits h2 {
         padding: 0 0 20px 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 17px;
+    }
+    .benefits h3 {
+        font-size: 17px;
+    }
+    .benefits {
+        padding-top: 320px;
     }
     .benefits-group {
         padding: 0px 0 20px 20px;
     }
     .experience {
-        padding: 0px 30px;
+        padding: 10px 30px;
     }
     .experience img{
         height: 280px;
@@ -943,6 +964,10 @@ footer li a{
     }
     .process img{
         height: 300px;
+    }
+    .process h3 {
+        line-height: 1.4;
+        padding-top: 30px;
     }
     .experience h3{
         font-size: 26px;
