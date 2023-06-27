@@ -27,7 +27,7 @@ h3{
     display: flex;
     justify-content: space-between;
 }
- .navigation p{
+.navigation p{
     padding: 30px 0 0 90px;
     font-size: 25px;
 }
@@ -293,7 +293,6 @@ h3{
 .reviewSection p{
     font-size: 18px;
     margin-right: 30px;
-    /* font-weight: 300; */
 }
 .reviewSecList{
     background-color: #5a6e79;
@@ -393,6 +392,10 @@ footer ul li a{
     text-decoration: none;
     color: #f3f7f9;
     font-size: 14px;
+}
+footer ul li a:hover{
+    font-size: 14px;
+    text-decoration: underline;
 }
 .footerIcons a{
     text-decoration: none;
@@ -909,7 +912,6 @@ footer ul li a{
         align-items: center;
     }
     footer h3 ,footer h5{
-        margin: auto;
         text-align: center;
         width: 300px;
     }
@@ -1032,9 +1034,11 @@ footer ul li a{
     }
     .banner h1{
         font-size: 25px;
-    }.banner p{
+    }
+    .banner p{
         font-size: 14px;
-    }p{
+    }
+    p{
         font-size: 14px;
     }
     .benefits {
@@ -1052,9 +1056,6 @@ footer ul li a{
     .experience p {
         font-size: 14px;
         line-height: 1.4;
-    }
-    p {
-        font-size: 14px;
     }
     h3{
         font-size: 18px;
