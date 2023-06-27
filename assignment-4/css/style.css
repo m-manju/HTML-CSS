@@ -58,6 +58,9 @@ h3{
 .icons .fas{
     padding-right: 40px;
 }
+.navbar{
+    display: none;
+}
 /* --------- banner section starts here ------ */
 .banner-borderbox{
     width: 100px;
@@ -970,27 +973,62 @@ footer ul li a{
 }
 @media (max-width: 430px){
     .navigation{
-        height: 100px;
+        display: none;
     }
-    .navigation .icons{
-        padding: 60px 0 0 360px;
-        font-size: 13px;
+    .navbar {
+        height: 60px;
+        padding: 10px 10px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    .navigation ul {
-        padding-top: 20px;
+    .menu-toggle{
+        visibility: hidden;
     }
-    .navigation p{
-        font-size: 16px;
-        padding-left: 16px;
+    .navbar p{
+        font-size: 20px;
     }
-    .navigation ul li a{
-        font-size: 14px;
+    .menu-bar {
+        position: relative;
+        z-index: 4;
     }
-    .navigation ul li:first-child {
-        padding-left: 16px;
+    .dropdown-btn {
+        background-color: #697c86;
+        color: #fff;
+        padding: 5px 20px;
+        cursor: pointer;
+    }
+    .dropdown-content {
+       display: none;
+       position: absolute;
+       background-color: #f9f9f9;
+       min-width: 110px;
+       color: #5a6e79;
+       /* z-index: 1; */
+       padding: 10px 20px;
+    }
+    .dropdown-content ul li:hover {
+        color: #333;
+        background-color: #d0d5d7;
+        padding: 5px;
+    }
+    .dropdown-content ul {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+    } 
+    .dropdown-content li {
+       padding: 7px 0;
+    }
+    .dropdown-content li a{
+        text-decoration: none;
+    }
+    .menu-toggle:checked ~ .dropdown-content {
+       display: block;
     }
     .banner .banner-txtbox{
-        top: 400px;
+        top: 360px;
     }
     .banner h1{
         font-size: 25px;
@@ -1074,10 +1112,7 @@ footer ul li a{
         height: 260px;
     }
     .banner .banner-txtbox{
-        top: 350px;
-    }
-    .navigation .icons{
-        padding-left: 315px;
+        top: 310px;
     }
     .benefits {
         padding-top: 20px;
@@ -1099,19 +1134,6 @@ footer ul li a{
     }
 }
 @media (max-width: 345px){
-    .navigation p{
-        padding-left: 8px;
-    }
-    .navigation ul li{
-        padding-left: 0;
-        padding-right: 17px;
-    }
-    .navigation ul li:first-child {
-        padding-left: 8px;
-    }
-    .navigation .icons{
-        padding: 60px 0 0 250px;
-    }
     .banner .banner-txtbox{
         width: 100%;
     } 
