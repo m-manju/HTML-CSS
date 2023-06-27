@@ -127,7 +127,7 @@ h3{
     padding:15px  10px 20px 0;
 }
 .benefits p{
-    max-width: 300px;
+    width: 270px;
 }
 .benefits-group{
     display: flex;
@@ -140,9 +140,10 @@ h3{
 .benefitsHere img{
     width: 40px;
     height: 40px;
+    margin-top: 7px;
 }
 .benefitsHeretruck, .benefitsHereCheck{
-    padding-left: 110px;
+    padding-left: 60px;
 }
 .benefitsHere .truck{
     width: 70px;
@@ -289,6 +290,7 @@ h3{
 .reviewSection p{
     font-size: 18px;
     margin-right: 30px;
+    /* font-weight: 300; */
 }
 .reviewSecList{
     background-color: #5a6e79;
@@ -406,6 +408,25 @@ footer ul li a{
 }
 
 /* ------------------------------RESPONSIVE DESIGN ---------------------------------- */
+@media (max-width: 1200px){
+    .banner img {
+        width: 75.5%;
+    }
+    .benefitsHeretruck, .benefitsHereCheck{
+        padding-left: 40px;
+    }
+    .benefits p {
+        width: 220px;
+    }
+    .experience-cntnt {
+        padding: 10px 0 0 30px;
+    }
+    .process img {
+        width: 500px;
+    }.process .processList {
+        padding-right: 30px;
+    }
+}
 @media (max-width: 1100px){
     p{
         font-size: 16px;
@@ -535,6 +556,8 @@ footer ul li a{
     }
     .reviewSection{
         padding: 0 90px;
+    }.reviewSection p {
+        font-size: 16px;
     }
     .subscribeButton{
         width: 500px;
@@ -779,6 +802,10 @@ footer ul li a{
    .navigation .icons{
        padding: 38px 0 0 490px;
    }
+   .benefits p {
+    font-size: 16px;
+    width: 400px;
+   }
 }
 @media (max-width: 560px){
     .navigation ul {
@@ -898,10 +925,16 @@ footer ul li a{
         padding-left: 40px;
     }  
 }
-@media (max-width: 528px){
+@media (max-width: 537px){
    .navigation .icons{
        padding: 38px 0 0 410px;
    }
+   .benefits p {
+    width: 300px;
+   }
+   .benefits {
+    padding-top: 260px;
+}
 }
 @media (max-width: 455px){
     .navigation .icons{
@@ -922,6 +955,17 @@ footer ul li a{
         padding-bottom: 10px;
         font-size: 15px;
         width: 290px;
+    }
+    .marker {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .process h3 {
+        padding-top: 35px;
+    }
+    .process p {
+        font-size: 14px;
     }
 }
 @media (max-width: 430px){
@@ -947,7 +991,8 @@ footer ul li a{
     }
     .banner .banner-txtbox{
         top: 400px;
-    }.banner h1{
+    }
+    .banner h1{
         font-size: 25px;
     }.banner p{
         font-size: 14px;
@@ -959,13 +1004,21 @@ footer ul li a{
     }
     .experience {
         padding: 0px 16px;
-    }h2{
+    }
+    h2{
         font-size: 20px;
-    }.experience p {
+    }
+    .benefits-txt p {
+        font-size: 14px;
+    }
+    .experience p {
         font-size: 14px;
         line-height: 1.4;
-    }h3{
-        
+    }
+    p {
+        font-size: 14px;
+    }
+    h3{
         font-size: 18px;
     }
     .process {
@@ -976,19 +1029,24 @@ footer ul li a{
         height: 75px;
     }
     .marker02::after {
-        bottom: -100px;
-        height: 95px;
-    }.reviews h2 {
+        bottom: -80px;
+        height: 75px;
+    }
+    .reviews h2 {
         padding: 16px 0 20px 16px;
-    }.reviewSec1, .reviewSec2 {
+    }
+    .reviewSec1, .reviewSec2 {
         margin-right: 16px;
         margin-left: 16px;
+    }
+    .reviewSection p {
+        font-size: 14px;
     }
     .subscribeTitle h2 {
         padding-top: 25px;
     }
     .subscribeButton p {
-        font-size: 16px;
+        font-size: 14px;
     }
     .fa-instagram{
         padding-left: 25px;
@@ -1000,11 +1058,24 @@ footer ul li a{
     } 
     .benefits-txt p {
         padding-bottom: 10px;
-        font-size: 15px;
         width: 250px;
+    }
+    .reviewSection p {
+        margin: 0 16px;
+        padding-left: 0px;
+    }
+    .reviewSection h3 {
+        margin: 0 16px;
+        padding-left: 0px;
     }
 }
 @media (max-width: 376px){
+    .banner img {
+        height: 260px;
+    }
+    .banner .banner-txtbox{
+        top: 350px;
+    }
     .navigation .icons{
         padding-left: 315px;
     }
@@ -1012,17 +1083,19 @@ footer ul li a{
         padding-top: 20px;
     }
     .benefits h2 {
-        padding: 250px 0 30px 16px;
+        padding: 230px 0 30px 16px;
     }
     .reviews h3 {
         padding-bottom: 15px;
         font-size: 20px;
     }
-    .subscribeButton p {
-        font-size: 14px;
-    }.experienceNumsDetail h3 {
+    .experienceNumsDetail h3 {
         font-size: 30px;
         padding: 10px 50px 10px 0;
+    }
+    .marker02::after {
+        bottom: -100px;
+        height: 95px;
     }
 }
 @media (max-width: 345px){
@@ -1079,11 +1152,11 @@ footer ul li a{
         font-size: 14px;
     }
     .marker::after {
-        bottom: -90px;
-        height: 85px;
+        bottom: -100px;
+        height: 95px;
     }
     .marker02::after {
-        bottom: -90px;
-        height: 85px;
+        bottom: -100px;
+        height: 95px;
     }
 }
