@@ -12,6 +12,7 @@
 </head>
 <body>
       <main>
+        <header>
           <nav class="navigation container">
             <p class="font-mono">Luxterior</p>
             <div class="nav-links">
@@ -27,22 +28,24 @@
               <a href="#" class="fas fa-bars"></a>
             </div>
           </nav>
-          <nav class="navbar">
+          <nav class="navbar container">
             <p>Luxterior</p>
             <div class="menu-bar">
               <input type="checkbox" id="menu-toggle" class="menu-toggle">
-              <label for="menu-toggle" class="dropdown-btn"><a class="fas fa-bars"></a></a></label>
+              <label for="menu-toggle" class="dropdown-btn"><a class="fas fa-bars"></a></label>
               <div class="dropdown-content">
                 <ul>
-                  <li class="font-mono"><a href="#banner">Home</a></li>
-                  <li class="font-mono"><a href="#experience">About</a></li>
-                  <li class="font-mono"><a href="#process">Features</a></li>
-                  <li class="font-mono"><a href="#subscribe">Contacts</a></li>
+                  <li class="font-mono"><a href="#">Home</a></li>
+                  <li class="font-mono"><a href="#">About</a></li>
+                  <li class="font-mono"><a href="#">Features</a></li>
+                  <li class="font-mono"><a href="#">Contacts</a></li>
                 </ul>
               </div>
             </div>
          </nav>
-         <div class="banner container">
+        </header> 
+        <section class="banner">
+          <div class="container">
             <div class="banner-borderbox"></div>
             <img src="images/int1.jpg" alt="image not found">
             <div class="banner-txtbox" id="banner">
@@ -53,11 +56,13 @@
                    professional interior designers </p>
                </div>
             </div>
-            <div class="banner-greybox container">
+            <div class="banner-greybox">
               <a class="fas fa-arrow-down"></a>
             </div>
-         </div>
-         <div class="benefits container">
+          </div>
+        </section>
+        <section class="benefits">
+          <div class="container">
             <div class="lineWithHeading">
                 <div class="line"></div>
                 <div>
@@ -91,8 +96,10 @@
                     </div>
                  </div>
             </div>
-         </div>
-         <div class="experience container" id="experience">
+          </div>
+        </section>  
+        <section class="experienceSec" id="experience">
+          <div class="container experience">
             <div class="experience-box">
                 <figure>
                   <img src="images/int3.jpeg" alt="image not found">
@@ -124,7 +131,9 @@
                 </div>
             </div>
          </div>
-         <div class="process container" id="process">
+        </section> 
+        <section class="processSec" id="process">
+          <div class="container process">
             <div class="processList">
                <h2>We provide the best <br>process experience</h2>
                <div class="timeline">
@@ -158,7 +167,9 @@
              <img src="images/int2.jpg" alt="image not found">
            </figure>
          </div>
-         <div class="reviews container">
+        </section> 
+        <section class="reviews">
+          <div class="container">
             <h2>What our customers<br>
             are saying</h2>
             <div class="reviewSection">
@@ -171,7 +182,7 @@
                    resulting by sharing changed imagination. </q></p>
                    <div class="reviewSecList-img">
                      <img src="images/img2.jpg" alt="image not found">
-                     <div>
+                     <div class="reviewNames">
                          <h4>Ralph Edwards</h4>
                          <h6>Product manager</h6>
                      </div>
@@ -186,7 +197,7 @@
                    resulting by sharing changed imagination. </q></p>
                    <div class="reviewSecList-img">
                      <img src="images/img2.jpg" alt="image not found">
-                     <div>
+                     <div class="reviewNames">
                          <h4>Ralph Edwards</h4>
                          <h6>Housewife</h6>
                      </div>
@@ -194,7 +205,9 @@
                 </div>
             </div>
          </div>
-         <div class="subscribe container" id="subscribe">
+        </section>
+        <section class="subscribe" id="subscribe">
+          <div class="container">
             <div class="subscribeTitle">
                 <h2>Subscribe to get the latest<br>
                 news about us</h2>
@@ -202,10 +215,12 @@
                email below to get our daily update about us.</p>
             </div>
             <div class="subscribeButton container">
-              <p>Enter your email address</p>
+              <input type="email" name="email" placeholder="Enter your email address">
+              <!-- <p>Enter your email address</p> -->
               <button>Subscribe</button>
             </div>
-        </div>  
+          </div> 
+        </section>   
     </main>
     <footer>
         <div class="container footercls">
@@ -216,8 +231,8 @@
               professional interior designer. </h5>
           </div>
           <div class="footerul">
+            <h4 class="footer-h4">About</h4>
             <ul class="ul">
-                <li class="cls-li">About</li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Contact us</a></li>
@@ -225,8 +240,8 @@
             </ul>
           </div>
           <div class="footerul">
+            <h4 class="footer-h4">Company</h4>
             <ul class="ul">
-                <li class="cls-li">Company</li>
                 <li><a href="#">Our office</a></li>
                 <li><a href="#">Touch with us</a></li>
                 <li><a href="#">FAQ</a></li>
@@ -234,8 +249,8 @@
             </ul>
           </div>
           <div class="footerul">
+            <h4 class="footer-h4">Support</h4>
             <ul class="ul">
-                <li class="cls-li">Support</li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Support carrier</a></li>
                 <li><a href="#">Contact us</a></li>
@@ -244,8 +259,8 @@
             </ul>
           </div>
           <div class="footerul">
+            <h4 class="footer-h4">Get in touch</h4>
             <ul class="ul">
-                <li class="cls-li">Get in touch</li>
                 <li><a href="#">About us About us</a></li>
                 <li><a href="#">Features About us about</a></li>
             </ul>
