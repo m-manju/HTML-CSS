@@ -96,16 +96,23 @@ nav a:hover::after{
     z-index: 2;
 }
 .banner .banner-txtbox{
-    width: 470px;
+    width: 100%;
     max-height: 510px;
     background-color: #5a6e79;
     top: 250px;
     position: absolute;
     z-index: 3;
+    right: 57.5%;
+}
+.banner-txt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 .banner-txtbox h1, .banner-txtbox p{
     color: #fff;
     line-height: 1.4;
+    max-width: 300px;
 }
 .banner-txtbox h1{
     font-size: 36px;
@@ -456,7 +463,11 @@ footer ul li a:hover{
     font-size: 24px;
 }
 /* ------------------------------RESPONSIVE DESIGN ---------------------------------- */
- @media (max-width: 1200px){
+@media (max-width: 1500px){
+    .banner .banner-txtbox{
+        right: 63.5%;
+    }} 
+@media (max-width: 1200px){
     .banner .banner-img{
         width: 75.5%;
     }
@@ -475,6 +486,10 @@ footer ul li a:hover{
     }
     .process .processList {
         padding-right: 30px;
+    }
+    .banner .banner-txtbox{
+        width: 470px;
+        left: 0px;
     }
     .fab{
         font-size: 24px;
@@ -500,9 +515,6 @@ footer ul li a:hover{
     }
     .banner-borderbox{
         top: 521px;
-    }
-    .banner .banner-txtbox{
-        width: 450px;
     }
     .banner .banner-img{
         width: 74.5%;
@@ -668,11 +680,9 @@ footer ul li a:hover{
         height: 530px;
         margin-left: 0;
         padding-top: 95px;
-    }
-   .banner .banner-txtbox{
-        width: 430px;
-        /* height: 210px; */
-        top: 190px;
+    }.banner .banner-txtbox{
+        width: 470px;
+        left: -68px;
     }
     .banner-txtbox .banner-txt{
         padding: 25px 52px;
@@ -892,12 +902,17 @@ footer ul li a:hover{
     }
     .banner .banner-txtbox{
         width: 100%;
-        height: fit-content;
-        top: 480px;
+        left: 0px;
+        top: 510px;
     }
     .banner-txtbox .banner-txt{
         padding: 25px 16px 33px 16px;
+        display: flex;
+        align-items: baseline;
     } 
+    .banner-txtbox h1, .banner-txtbox p{
+        max-width: 1000px;
+    }
     .benefits{
         padding-top: 70px;
     }.line::after {
