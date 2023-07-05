@@ -17,6 +17,7 @@ h2{
 p{
     font-size: 18px;
     line-height: 1.4;
+    font-weight: 100;
 }
 h3{
     font-size: 23px;
@@ -45,8 +46,18 @@ h3{
     font-size: 16px;
     display: block;
 }
-.navigation ul li a:hover{
-    color: #5a6e79;
+nav a::after{
+    content: "";
+    background: #697c86;
+    display: block;
+    width: 100%;
+    height: 2px;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+nav a:hover::after{
+    transform: scaleX(1);
 }
 .icons a{
     text-decoration: none;
@@ -72,17 +83,21 @@ h3{
     border: 3px solid black;
     z-index: 1;
 }
-.banner img{
+.banner .banner-img{
     width: 76.5%;
     height: 580px;
     margin-top: -80px;
     margin-left: 17%;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
     position: relative;
     z-index: 2;
 }
 .banner .banner-txtbox{
     width: 470px;
-    height: 310px;
+    max-height: 510px;
     background-color: #5a6e79;
     top: 250px;
     position: absolute;
@@ -141,16 +156,19 @@ h3{
     padding: 30px 0px 30px 0px;
     display: flex;
 }
-.benefitsHere img{
+.benefitsHere .benefits-img{
     width: 40px;
     height: 40px;
     margin-top: 7px;
 }
+.truck-img img,.badge-img img, .check-img img{
+    width: 100%;
+}
 .benefitsHeretruck, .benefitsHereCheck{
     padding-left: 60px;
 }
-.benefitsHere .truck{
-    width: 70px;
+.benefitsHere .truck-img{
+    width: 46px;
     height: 40px;
 }
 .benefits-txt{
@@ -168,9 +186,13 @@ h3{
 .experience .experience-box{
     display: flex;
 }
+.experience .experience-img{
+    width: 1300px;
+    height: 425px;
+}
 .experience img{
-    width: 472px;
-    height: 495px;
+    width: 100%;
+    height: 100%;
 }
 .experience-cntnt{
     padding: 10px 0 0 70px;
@@ -206,11 +228,11 @@ h3{
 .experience-button{
     display: flex;
 }
-.experience-button img{
+.experience-button .arrow-img{
     width: 60px;
     height: 40px;
     position: relative;
-    right: 3%;
+    right: 36%;
     margin-top: 13px;
 }
 /* -------- Process Section starts here ------------- */
@@ -220,6 +242,10 @@ h3{
 }
 .process .processList{
     padding-right: 70px;
+    width: 50%;
+}
+.processList h2{
+    padding-bottom: 30px;
 }
 .process h3{
     padding-bottom: 10px;
@@ -228,19 +254,23 @@ h3{
 }
 .process p{
     line-height: 1.6;
+    padding-bottom: 10px;
+}
+.process .process-img{
+    height: 550px;
+    width: 50%;
 }
 .process img{
-    height: 650px;
-    width: 600px;
-}
-.process h2{
-    padding-bottom: 50px;
+    height: 100%;
+    width: 100%;
 }
 .timeline-item {
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    position: relative;
 }
 .marker {
     position: relative;
+    z-index: 1;
     width: 40px;
     height: 40px;
     background-color: #5a6e79;
@@ -250,25 +280,26 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
+    /* margin-top: 60px; */
+    top: 0px;
+    box-shadow: 0 0 0 20px white;
 }
-.marker::after {
+.timeline-item::before {
     content: "";
     position: absolute;
-    bottom: -120px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50px;
+    left: 20px;
     width: 2px;
-    height: 110px;
+    height: 100%;
     background-color: #5a6e79;
-} 
-.timeline-item:last-child .marker::after {
-    display: none;
+}
+.timeline-item:last-child::before {
+    height: 0;
 }  
 .content {
     margin-left: 60px;
-    margin-top: -65px;
+    margin-top: -70px;
 }
-
 /* -------- Review section starts here -------- */
 .reviews{
     padding-top: 50px;
@@ -297,6 +328,7 @@ h3{
 }
 .reviewSecList{
     background-color: #5a6e79;
+    width: 50%;
 }
 .reviewSecList img{
     width: 70px;
@@ -304,6 +336,10 @@ h3{
 }
 .reviewSecList-img{
     display: flex;
+}
+.reviewSecList-img .review-img{
+    height: 40px;
+    width: 40px;
 }
 .reviewSecList-img img{
     height: 40px;
@@ -319,13 +355,14 @@ h3{
     color: #f3f7f9;
     font-weight: 400;
     position: relative;
-    right: 15%;
+    left: 39%;
 }
 .reviewSecList-img h6{
     line-height: 2;
     font-size: 13px;
     opacity: .7;
     font-weight: 100;
+    padding-bottom: 40px;
 }
 /* --------- subscribe section starts here ------------ */
 .subscribeTitle h2{
@@ -419,12 +456,12 @@ footer ul li a:hover{
     font-size: 24px;
 }
 /* ------------------------------RESPONSIVE DESIGN ---------------------------------- */
-@media (max-width: 1200px){
-    .banner img {
+ @media (max-width: 1200px){
+    .banner .banner-img{
         width: 75.5%;
     }
     .benefitsHeretruck, .benefitsHereCheck{
-        padding-left: 40px;
+        padding-left: 50px;
     }
     .benefits p {
         width: 220px;
@@ -432,9 +469,11 @@ footer ul li a:hover{
     .experience-cntnt {
         padding: 10px 0 0 30px;
     }
-    .process img {
-        width: 500px;
-    }.process .processList {
+    .process .process-img{
+        height: 680px;
+        width: 560px;
+    }
+    .process .processList {
         padding-right: 30px;
     }
     .fab{
@@ -464,9 +503,8 @@ footer ul li a:hover{
     }
     .banner .banner-txtbox{
         width: 450px;
-        height: 280px;
     }
-    .banner img{
+    .banner .banner-img{
         width: 74.5%;
     }
     .banner h1{
@@ -485,9 +523,7 @@ footer ul li a:hover{
         flex-direction: column;
         padding: 0 0 20px 90px;
     }
-    .benefitsHere .truck{
-        width: 40px;
-        height: 30px;
+    .benefitsHere .truck-img{
         margin-left: 0px;
     }
     .benefits-txt{
@@ -496,7 +532,8 @@ footer ul li a:hover{
     }
     .benefits-txt h3{
         padding-bottom:10px;
-    }.benefits h2 {
+    }
+    .benefits h2 {
         padding: 15px 10px 35px 0;
     }
     .benefits-txt{
@@ -505,21 +542,13 @@ footer ul li a:hover{
     .benefitsHere {
         padding: 0px 10px 10px 0;
     }
-    .benefitsHere img{
-        width: 25px;
-        height: 25px;
-    }
-    .benefitsHere .truck{
-        width: 32px;
-        height: 26px;
-    }
     .benefits p{
         font-size: 16.5px;
         width: 500px;
         padding-bottom: 25px;
     }
     .experience{
-        padding: 30px 90px;
+        padding: 0 90px 40px 90px;
     }
     .experience p{
         font-size: 16px;
@@ -536,12 +565,16 @@ footer ul li a:hover{
     }
     .experience img{
         width: 100%;
-        height: 600px;
+    }
+    .experience .experience-img{
+        width: 65%;
+        height: 100%;
     }
     .experience-button img{
-        width: 60px !important;
-        height: 30px !important;
-        margin-top: 8px !important;
+        margin-left: -45px;
+        margin-top: -6px;
+        width: 100%;
+        height: 100%;
     }
     .experience button{
         margin-top: 0px;
@@ -557,22 +590,21 @@ footer ul li a:hover{
     .process .processList {
         padding-right: 0px;
     }
-    .process img{
-        width: 100%;
-        height: 560px;
+    .process .process-img{
+        width: 65%;
+        height: 100%;
+        padding-top: 40px;
     }
     .process figure{
         margin: auto;
         padding-left: 0px;
     }
-    .process h2{
-        padding-bottom: 20px;
+    .process p {
+        width: 700px;
     } 
-    .marker::after {
-        bottom: -90px;
-        width: 1.5px;
-        height: 80px;
-    } 
+    .marker {
+        box-shadow: 0 0 0 10px white;
+    }
     .reviews h2{
         padding: 0px 90px 30px 90px;
     }
@@ -591,6 +623,11 @@ footer ul li a:hover{
         border: none;
         font-size: 16px;
     }
+} 
+@media (max-width: 1000px){
+    .experience-button img{
+        margin-left: -30px ;
+    }
 }
 @media (max-width: 920px){
     footer .footer-h4 {
@@ -599,73 +636,114 @@ footer ul li a:hover{
     footer h3{
         font-size: 20px;
     }
+    .process p {
+        width: 600px;
+    }
 }
 @media (max-width: 788px){
     .navigation{
-        height: 100px;
+        height: 67px;
     }
     .navigation p{
-        padding: 30px 0 0 50px;
+        padding: 20px 0 0 50px;
         font-size: 23px;
     }
     .navigation .icons{
-        padding: 38px 10px 0 0;
+        padding: 26px 10px 0 0;
+    }
+    .navigation ul {
+        padding-top: 28px;
+    }
+    .banner h1 {
+        font-size: 26px;
+    }
+    p{
+        font-size: 16px;
     }
     .banner-borderbox{
-        top: 474px;
-        margin-left: 12%;
+        display: none;
     }
-    .banner img{
-        width: 78.5%;
+    .banner .banner-img{
+        width: 100%;
         height: 530px;
-        margin-left: 15%;
+        margin-left: 0;
+        padding-top: 95px;
     }
-    .banner .banner-txtbox{
+   .banner .banner-txtbox{
         width: 430px;
-        height: 228px;
-    }
-    .banner-txtbox h1, .banner-txtbox p{
-        line-height: 1.3;
-    }
-    .banner-txtbox h1{
-        font-size: 32px;
+        /* height: 210px; */
+        top: 190px;
     }
     .banner-txtbox .banner-txt{
-        padding: 30px 52px;
+        padding: 25px 52px;
     } 
     .banner-greybox{
-        bottom: 87px;
-        margin-left: 80.2%;
-    }
-    .banner-greybox .fas{
-        font-size: 30px;
+        display: none;
     }
     .line::after {
-        margin: 60px 30px 0 50px;
+        margin: 90px 30px 0 50px;
     }
-    .benefits-group{
+    .benefits h2 {
+        padding: 60px 10px 35px 0;
+        font-size: 24px;
+    }
+    .benefits h3 {
+        font-size: 20px;
+    }
+    .benefits-group {
         padding: 0 0 20px 50px;
+    }.benefits p {
+        padding-bottom: 15px;
     }
-    .experience {
+   .experience {
         padding: 0px 50px;
-    }
-    .experience img{
-        height: 300px;
     }
     .experience h2 {
         padding-top: 30px;
+        font-size: 24px;
+    }
+    .experience button {
+        margin-top: 0px;
+        padding: 5px 20px;
+    }
+    .experience button {
+        margin-top: 0px;
+        padding: 5px 20px;
+        height: 37px;
+    }
+    .experience-button .arrow-img {
+        width: 40px;
+        height: 30px;
+        margin-top: 9px;
+    }
+    .experienceNumsDetail h3 {
+        padding: 10px 70px 0 0;
+        font-size: 30px;
+    }
+    .experienceNumsDetail {
+        padding-bottom: 20px;
     }
     .process {
         padding: 40px 50px 0 50px;
     }
     .process h3{
-        padding-bottom: 1px;
-        line-height: 1.5;
-        padding-top: 28px;
+        padding-top: 30px;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    h3{
+        font-size: 20px;
+    }p{
+        line-height: 1.2;
+    }
+    .banner-txtbox h1, .banner-txtbox p {
+        line-height: 1.2;
     }
     .process p{
-        line-height: 1.4;
-        font-size: 16px;
+        width: 550px;
+        line-height: 1.3;
     }
     .process .processList {
         padding-right: 0px;
@@ -674,30 +752,15 @@ footer ul li a:hover{
         margin: auto;
         padding-left: 0px;
     }
-    .process img{
-        height: 360px;
-        padding: 0;
-    }
     .marker {
-        width: 35px;
-        height: 35px;
-        font-size: 14px;
-    }
-    .marker::after {
-        bottom: -65px;
-        height: 60px;
-    }
-    .reviews{
-        padding-top: 0px;
+        box-shadow: 0 0 0 10px white;
     }
     .reviews h2{
-        padding: 50px 0 20px 50px;
+        padding: 0 0 20px 50px;
     }
     .reviews h3{
         margin-right: 30px;
-    }.reviewSection p {
-        font-size: 16px;
-        margin-right: 30px;
+        font-size: 20px;
     }
     .reviewSection{
         padding: 0 50px 0 50px;
@@ -722,17 +785,8 @@ footer ul li a:hover{
     footer h5{
         max-width: 160px;
     }
-}
+} 
 @media (max-width: 700px){
-    .banner-greybox{
-        margin-left: 79%;
-    }
-    .navigation .icons{
-        padding: 38px 0 0 0px;
-    }
-    .icons .fas {
-        padding-right: 20px;
-    }
     .footerul a{
         font-size: 13px;
     }
@@ -745,18 +799,34 @@ footer ul li a:hover{
     footer h3{
         font-size: 20px;
     }
-}
+    .experience {
+        padding: 0px 0px;
+    }
+    .experience-cntnt{
+        padding: 0px 50px;
+    }.experience-button img{
+        margin-left: -5px;
+    }
+    .process{
+        padding: 0px;
+    }
+    .processList {
+        padding: 40px 50px 0 50px;
+    }
+    .process p {
+        width: 440px;
+    }
+    .process img {
+        width: 100%;
+    }
+    .process-img{
+        padding-left: 0;
+    }
+    .reviews h2 {
+        padding: 0 0 20px 50px;
+    }
+} 
 @media (max-width: 660px){
-    h1{
-        font-size: 26px;
-    }
-    h2{
-        font-size: 25px;
-    }
-    p{
-        font-size: 17px;
-        line-height: 1.4;
-    } 
     .navigation{
         height: 120px;
         flex-direction: column;
@@ -774,43 +844,6 @@ footer ul li a:hover{
     }
     .icons .fas{
         padding-right: 10px;
-    }
-    .banner-borderbox{
-        top: 400px;
-        margin-left: 12%;
-    }
-    .banner-greybox{
-        margin-left: 76.5%;
-    }
-    .banner img{
-        height: 460px;
-        width: 77%;
-    }
-    .banner .banner-txtbox{
-        width: 400px;
-        height: 250px;
-    }
-    .banner-txtbox h1, .banner-txtbox p{
-        line-height: 1.2;
-    }
-    .banner-txtbox h1{
-        font-size: 33px;
-    }
-    .banner-txtbox p{
-        font-size: 18px;
-    }
-    .banner-txtbox .banner-txt{
-        padding: 30px 50px;
-    } 
-    .benefits .line::after{
-        display: none;
-    }
-    .benefits h2{
-        padding: 0  0 30px 60px;
-    }
-    .benefits-group{
-        flex-direction: column;
-        padding: 0px 0 20px 40px;
     } 
 } 
 @media (max-width: 610px){
@@ -828,94 +861,79 @@ footer ul li a:hover{
     footer h3{
         font-size: 16px;
     }
+    .process .process-img{
+        height: 100%;
+        width: 100%;
+    }
+    .experience-button img{
+        margin-left: 5px;
+    }.truck-img img, .badge-img img, .check-img img {
+        width: 25px;
+    }
+    
 }
 @media (max-width: 590px){
    .navigation .icons{
        padding: 38px 0 0 490px;
    }
    .benefits p {
-    font-size: 16px;
     width: 400px;
    }
+   .process p {
+    width: 400px;
+}
 }
 @media (max-width: 560px){
-    .navigation ul {
-        padding-top: 30px;
-    }
     .navigation p {
-        padding: 20px 0 0 50px;
+        padding-left: 16px;
     }
-    .navigation .icons{
-        padding: 30px 0 0 470px;
-    }
-    .banner-borderbox{
-        display: none;
-    }
-    .banner img{
-        width: 100%;
-        height: 300px;
-        margin-top: 0px;
-        margin-left: 0;
-    }
-    p {
-        font-size: 16px;
+    .navigation ul li:first-child {
+        padding-left: 16px;
     }
     .banner .banner-txtbox{
         width: 100%;
         height: fit-content;
-        top: 410px;
-    }
-    .banner-txtbox h1, .banner-txtbox p{
-        line-height: 1.4;
-    }
-    .banner-txtbox h1{
-        font-size: 30px;
+        top: 480px;
     }
     .banner-txtbox .banner-txt{
         padding: 25px 16px 33px 16px;
     } 
-    .banner-greybox{
-        display: none;
-    }
-    .banner-greybox .fas{
-        padding: 25% 42%;
-        font-size: 30px;
-    }
     .benefits{
-        padding-top: 280px;
+        padding-top: 70px;
+    }.line::after {
+        margin: 95px 30px 0 16px;
+    }.benefits-group {
+        padding: 0 0 20px 16px;
+    }.experience-cntnt {
+        padding: 0px 16px;
+    }.experience .experience-img {
+        width: 400px;
+        height: 300px;
+    }.experience-button img{
+        margin-left: -10px;
     }
-    .experienceNumsDetail {
-        padding: 10px 10px 10px 0;
-    }
-    .experienceNumsDetail h3 {
-        font-size: 40px;
-        padding: 10px 50px 10px 0;
-    }
-    .experience button{
-        margin: 10px 0;
-    }
-    .experience-button img {
-        margin-top: 20px !important;
-    }  
-    .process {
-        padding: 30px 50px 0 50px;
-    } 
     .process h3 {
         line-height: 1.4;
         padding-top: 25px;
+    }
+    .processList {
+        padding: 40px 0px 0 16px;
     }
      .reviewSection {
         padding: 0;
         flex-direction: column;
     }
-    .reviewSec1 {
-        margin: 0;
+    .reviews h2 {
+        padding: 0 0 20px 16px;
     }
-    .reviewSec1, .reviewSec2{
+    .reviewSec1{
         margin-bottom: 10px;
-        margin-right: 50px;
-        margin-left: 50px;
-    }.subscribeButton{
+    }
+    .reviewSec1 ,.reviewSec2{
+        margin-right: 0px;
+        width: 100%;
+    }
+    .subscribeButton{
         flex-direction: column;
         width: 70%;
     }
@@ -930,10 +948,6 @@ footer ul li a:hover{
         margin-left: 0px;
         margin: auto;
     }
-    .marker::after {
-        bottom: -80px;
-        height: 70px;
-    }
     .footercls{
         flex-wrap: wrap;
         justify-content: center;
@@ -947,26 +961,43 @@ footer ul li a:hover{
        padding: 38px 0 0 410px;
    }
    .benefits p {
-    width: 300px;
+    width: 350px;
    }
-   .benefits {
-    padding-top: 260px;
+   .process p {
+    width: 360px;
+    }
+    .process h2{
+        width: 300px ;
+    }
+    .experience-button img{
+        margin-left: -5px;
+    }
 }
+@media (max-width: 485px){
+    .benefits h2 {
+        padding: 80px 10px 35px 0;
+    }
+    .line::after {
+        margin: 115px 30px 0 16px;
+    }.experience-button img{
+        margin-left: 10px;
+    }
 }
 @media (max-width: 455px){
     .navigation .icons{
         padding: 38px 0 0 350px;
     } 
-    .benefits h2 {
-        padding: 0 0 30px 16px;
-        font-size: 22px;
-    }
     .benefits-txt h3 {
         padding-bottom: 10px;
         font-size: 18px;
     }
     .benefits-group {
         padding: 0px 0 20px 16px;
+    }.benefits h2 {
+        padding: 80px 10px 35px 16px;
+    }
+    .line::after {
+        display: none;
     }
     .benefits-txt p {
         padding-bottom: 10px;
@@ -977,9 +1008,14 @@ footer ul li a:hover{
         width: 30px;
         height: 30px;
         font-size: 12px;
+        box-shadow: 0 0 0 10px white;
+    }
+    .timeline-item::before {
+        top: 40px;
+        left: 15px;
     }
     .process h3 {
-        padding-top: 35px;
+        padding-top: 40px;
     }
     .process p {
         font-size: 14px;
@@ -1061,17 +1097,13 @@ footer ul li a:hover{
     p{
         font-size: 14px;
     }
-    .benefits {
-        padding-top: 240px;
-    }
-    .experience {
-        padding: 0px 16px;
-    }
     h2{
         font-size: 20px;
     }
     .benefits-txt p {
         font-size: 14px;
+    }.benefits h2 {
+        padding: 20px 10px 35px 16px;
     }
     .experience p {
         font-size: 14px;
@@ -1079,24 +1111,14 @@ footer ul li a:hover{
     }
     h3{
         font-size: 18px;
+    }.reviews {
+        padding-top: 20px;
     }
-    .process {
-        padding: 30px 16px 0 16px;
-    }
-    .marker::after {
-        bottom: -80px;
-        height: 75px;
-    }
-    .marker02::after {
-        bottom: -80px;
-        height: 75px;
+    .process p {
+        width: 300px;
     }
     .reviews h2 {
         padding: 16px 0 20px 16px;
-    }
-    .reviewSec1, .reviewSec2 {
-        margin-right: 16px;
-        margin-left: 16px;
     }
     .reviewSection p {
         font-size: 14px;
@@ -1126,6 +1148,13 @@ footer ul li a:hover{
         padding-bottom: 10px;
         width: 250px;
     }
+    .process p {
+        width: 250px;
+    }
+    .experience .experience-img {
+        width: 300px;
+        height: 260px;
+    }
     .reviewSection p {
         margin: 0 16px;
         padding-left: 0px;
@@ -1146,18 +1175,13 @@ footer ul li a:hover{
     .footerul:nth-last-child(3), .footerul:nth-last-child(4){
         padding: 40px 40px 10px 25px;
     }
-    .footerul li{
-        text-align: center;
-    }footer .footer-h4 {
-        text-align: center;
-    }
     .footerIcons a:first-child{
         padding-left: 20px;
     }
 }
 @media (max-width: 376px){
     .banner img {
-        height: 260px;
+        height: 240px;
     }
     .banner .banner-txtbox{
         top: 310px;
@@ -1166,7 +1190,7 @@ footer ul li a:hover{
         padding-top: 20px;
     }
     .benefits h2 {
-        padding: 230px 0 30px 16px;
+        padding: 30px 0 30px 16px;
     }
     .reviews h3 {
         padding-bottom: 15px;
@@ -1175,6 +1199,15 @@ footer ul li a:hover{
     .experienceNumsDetail h3 {
         font-size: 30px;
         padding: 10px 50px 10px 0;
+    }.experience-button img{
+        margin-left: 15px;
+    }
+    .process .process-img {
+        height: 100%;
+        width: 100%;
+    }
+    .process h2 {
+        width: 270px;
     }
     .marker02::after {
         bottom: -100px;
@@ -1207,14 +1240,14 @@ footer ul li a:hover{
     .experience {
         padding: 0px 10px;
     }
-    .experience img{
-        height: 230px;
+    .experience-button img {
+        margin-left: 25px;
     }
     .process {
-        padding: 30px 10px 0 10px;
-    }
-    .process img{
-        height: 260px;
+        padding: 0 10px 0 10px;
+    }.process p {
+        width: 200px;
+        font-size: 14px;
     }
     .reviews h2 {
         padding: 30px 0 20px 10px;
@@ -1222,18 +1255,19 @@ footer ul li a:hover{
     .reviewSec1, .reviewSec2 {
         margin-right: 0px;
         margin-left: 0px;
-    }.process p {
-        font-size: 14px;
     }.reviewSection p {
         font-size: 14px;
+        padding-bottom: 10px;
     }
-    .marker::after {
-        bottom: -100px;
-        height: 95px;
+    .reviewSecList img {
+        width: 40px;
+        margin: 16px;
+    }.reviewSecList-img h6, .reviewSecList-img h4 {
+        left: 25%;
+        top: -10px;
     }
-    .marker02::after {
-        bottom: -100px;
-        height: 95px;
+    .reviewSecList-img h6 {
+        padding-bottom: 20px;
     }
     footer{
         padding-bottom: 20px;
