@@ -66,21 +66,47 @@ h3{
     height: 100px;
     position: relative;
     top: 525px;
-    margin-left: 15.1%;
+    left: 100px;
+    margin-left: 7.9%;
     border: 3px solid black;
     z-index: 1;
 }
 .banner .banner-img{
-    width: 76.5%;
-    height: 580px;
-    margin-top: -80px;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
     margin-left: 17%;
+    position: relative;
+    padding-right: 265px;
 }
 .banner img {
     width: 100%;
     height: 100%;
     position: relative;
-    z-index: 2;
+}
+.banner-img::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    transform: translate(-25%, -76%);
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(6, 6, 6);
+}
+.banner-img::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    transform: translate(-85%, -85%);
+    width: 140px;
+    height: 120px;
+    background-color: #5a6e79;
+}
+.downArrow{
+    position: relative;
+    bottom: 65px;
+    width: 50px;
+    left: 87.7%;
 }
 .banner .banner-txtbox{
     width: 100%;
@@ -89,7 +115,7 @@ h3{
     top: 250px;
     position: absolute;
     z-index: 3;
-    right: 57.5%;
+    right: 63.4%;
 }
 .banner-txt{
     display: flex;
@@ -128,6 +154,7 @@ h3{
 /* ----------Benefits section starts here ---------- */
 .lineWithHeading{
     display: flex;
+    padding-top: 60px;
 }
 .line::after {
     content: "";
@@ -140,14 +167,15 @@ h3{
     padding:15px  10px 20px 0;
 }
 .benefits p{
-    width: 270px;
+    max-width: 270px;
 }
 .benefits-group{
     display: flex;
     padding: 30px 90px 20px 90px;
+    justify-content: space-between;
 }
 .benefitsHere{
-    padding: 30px 0px 30px 0px;
+    padding: 20px 0;
     display: flex;
 }
 .benefitsHere .benefits-img{
@@ -158,16 +186,13 @@ h3{
 .truck-img img,.badge-img img, .check-img img{
     width: 100%;
 }
-.benefitsHeretruck, .benefitsHereCheck{
-    padding-left: 60px;
-}
 .benefitsHere .truck-img{
     width: 46px;
     height: 40px;
 }
 .benefits-txt{
-    margin-left: 20px;
     width: 80%;
+    padding-left: 35px;
 }
 .benefits-txt h3{
     font-size: 24px;
@@ -181,18 +206,17 @@ h3{
     display: flex;
 }
 .experience .experience-img{
-    width: 1300px;
-    height: 425px;
+    width: 50%;
 }
 .experience img{
     width: 100%;
-    height: 100%;
 }
 .experience-cntnt{
     padding: 10px 0 0 70px;
+    width: 50%;
 }
 .experience h2{
-    padding-bottom: 20px;
+    padding: 0 240px 20px 0;
 }
 .experienceNums{
     display: flex;
@@ -221,13 +245,17 @@ h3{
 }
 .experience-button{
     display: flex;
-}
-.experience-button .arrow-img{
-    width: 60px;
-    height: 40px;
+}.experience-button button{
     position: relative;
-    right: 36%;
-    margin-top: 13px;
+}
+.experience-button button::after{
+    content: "\2192";
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    font-size: 40px;
+    transform: translateY(-60%);
+    font-family: sans-serif;
 }
 /* -------- Process Section starts here ------------- */
 .process{
@@ -248,10 +276,9 @@ h3{
 }
 .process p{
     line-height: 1.6;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .process .process-img{
-    height: 550px;
     width: 50%;
 }
 .process img{
@@ -274,9 +301,8 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: 60px; */
     top: 0px;
-    box-shadow: 0 0 0 20px white;
+    box-shadow: 0 0 0 10px white;
 }
 .timeline-item::before {
     content: "";
@@ -400,7 +426,7 @@ footer{
 }
 .footercls{
     display: flex;
-    padding: 90px 0px;
+    padding: 90px 0;
     justify-content: space-evenly;
 }
 footer h3{
@@ -418,7 +444,9 @@ footer h5{
 footer li{
     list-style: none;
     color: #f3f7f9;
-    padding: 6px 0px;
+    padding: 6px 0;
+}footer li:first-child {
+    padding: 0;
 }
 footer .footer-h4{
     font-size: 18px;
@@ -449,594 +477,180 @@ footer ul li a:hover{
     font-size: 24px;
 }
 /* ------------------------------RESPONSIVE DESIGN ---------------------------------- */
-@media (max-width: 1500px){
-    .banner .banner-txtbox{
-        right: 63.5%;
-    }} 
-@media (max-width: 1200px){
-    .banner .banner-img{
-        width: 75.5%;
-    }
-    .benefitsHeretruck, .benefitsHereCheck{
-        padding-left: 50px;
-    }
-    .benefits p {
-        width: 220px;
-    }
-    .experience-cntnt {
-        padding: 10px 0 0 30px;
-    }
-    .process .process-img{
-        height: 680px;
-        width: 560px;
-    }
-    .process .processList {
-        padding-right: 30px;
-    }
-    .banner .banner-txtbox{
-        width: 470px;
-        left: 0px;
-    }
-    .fab{
-        font-size: 24px;
-        padding: 20px 15px 0 0;
-    }
-    footer h5{
-        font-size: 13px;
-        max-width: 250px;
-    }
-    footer ul li a{
-        font-size: 13px;
-    }
-}
-@media (max-width: 1100px){
-    p{
-        font-size: 16px;
-    }
+@media (min-width: 1024px) {
     .navigation .icons{
-        padding: 38px 50px 0 0px;
+        padding: 38px 20px 0 0;
     }
-    .navigation ul li{
-        padding-right:30px ;
-    }
-    .banner-borderbox{
-        top: 521px;
-    }
-    .banner .banner-img{
-        width: 74.5%;
-    }
-    .banner h1{
-        font-size: 32px;
-    }
-    .benefits .line::after{
-        padding-top: 0px;
-    }
-    .banner-greybox{
-        margin-left: 81.5%;
-    }
-    .benefits{
-        margin-top: -40px;
-    }
-    .benefits-group{
-        flex-direction: column;
-        padding: 0 0 20px 90px;
-    }
-    .benefitsHere .truck-img{
-        margin-left: 0px;
-    }
-    .benefits-txt{
-        margin-left: 20px;
-        width: 960px;
-    }
-    .benefits-txt h3{
-        padding-bottom:10px;
-    }
-    .benefits h2 {
-        padding: 15px 10px 35px 0;
-    }
-    .benefits-txt{
-        margin-left: 17px;
-    }
-    .benefitsHere {
-        padding: 0px 10px 10px 0;
-    }
-    .benefits p{
-        font-size: 16.5px;
-        width: 500px;
-        padding-bottom: 25px;
-    }
-    .experience{
-        padding: 0 90px 40px 90px;
-    }
-    .experience p{
-        font-size: 16px;
-        line-height: 1.5;
-    }
-    .experience h3{
-        font-size: 50px;
-    }
-    .experience-cntnt{
-        padding: 10px 0 0 0;
-    }
-    .experience h2{
-        padding-top: 40px;
-    }
-    .experience img{
-        width: 100%;
-    }
-    .experience .experience-img{
-        width: 65%;
-        height: 100%;
-    }
-    .experience-button img{
-        margin-left: -45px;
-        margin-top: -6px;
-        width: 100%;
-        height: 100%;
-    }
-    .experience button{
-        margin-top: 0px;
-        padding: 15px 30px;
-    }
-    .experience .experience-box{
-        flex-direction: column;
-    }
-    .process{
-        flex-direction: column;
-        padding: 20px 90px 0 90px;
-    }
-    .process .processList {
-        padding-right: 0px;
-    }
-    .process .process-img{
-        width: 65%;
-        height: 100%;
-        padding-top: 40px;
-    }
-    .process figure{
-        margin: auto;
-        padding-left: 0px;
-    }
-    .process p {
-        width: 700px;
-    } 
-    .marker {
-        box-shadow: 0 0 0 10px white;
-    }
-    .reviews h2{
-        padding: 0px 90px 30px 90px;
-    }
-    .reviewSection{
-        padding: 0 90px;
-    }.reviewSection p {
-        font-size: 16px;
-    }
-    .subscribeButton{
-        width: 500px;
-    }.subscribeButton input {
-        padding: 10px;
-        width: 260px;
-        margin-right: 30px;
-        margin-left: 20px;
-        border: none;
-        font-size: 16px;
-    }
-} 
-@media (max-width: 1000px){
-    .experience-button img{
-        margin-left: -30px ;
-    }
-}
-@media (max-width: 920px){
-    footer .footer-h4 {
-        font-size: 17px;
-    }
-    footer h3{
-        font-size: 20px;
-    }
-    .process p {
-        width: 600px;
-    }
-}
-@media (max-width: 788px){
-    .navigation{
-        height: 67px;
-    }
-    .navigation p{
-        padding: 20px 0 0 50px;
+    .navigation p {
+        padding: 30px 0 0 60px;
         font-size: 23px;
     }
-    .navigation .icons{
-        padding: 26px 10px 0 0;
-    }
     .navigation ul {
-        padding-top: 28px;
+        padding-top: 38px;
     }
-    .banner h1 {
-        font-size: 26px;
+    .banner .banner-img {
+        width: 77.5%;
+        padding-right: 0;
     }
-    p{
-        font-size: 16px;
-    }
-    .banner-borderbox{
-        display: none;
-    }
-    .banner .banner-img{
-        width: 100%;
-        height: 530px;
-        margin-left: 0;
-        padding-top: 95px;
-    }.banner .banner-txtbox{
-        width: 470px;
-        left: -68px;
-    }
-    .banner-txtbox .banner-txt{
-        padding: 25px 52px;
-    } 
-    .banner-greybox{
-        display: none;
+    .banner .banner-txtbox {
+        top: 180px;
+        right: 55.4%;
     }
     .line::after {
-        margin: 90px 30px 0 50px;
+        margin: 60px 30px 0 60px;
+    }.benefits-group {
+        padding: 30px 60px 20px 60px;
+    }.experience {
+        padding: 80px 60px 80px 60px;
     }
-    .benefits h2 {
-        padding: 60px 10px 35px 0;
-        font-size: 24px;
+    .experience .experience-img {
+        min-width: 50%;
+    }.experience h2 {
+        padding: 0 100px 20px 0;
     }
-    .benefits h3 {
-        font-size: 20px;
-    }
-    .benefits-group {
-        padding: 0 0 20px 50px;
-    }.benefits p {
-        padding-bottom: 15px;
-    }
-   .experience {
-        padding: 0px 50px;
-    }
-    .experience h2 {
-        padding-top: 30px;
-        font-size: 24px;
-    }
-    .experience button {
-        margin-top: 0px;
-        padding: 5px 20px;
-    }
-    .experience button {
-        margin-top: 0px;
-        padding: 5px 20px;
-        height: 37px;
-    }
-    .experience-button .arrow-img {
-        width: 40px;
-        height: 30px;
-        margin-top: 9px;
-    }
-    .experienceNumsDetail h3 {
-        padding: 10px 70px 0 0;
-        font-size: 30px;
-    }
-    .experienceNumsDetail {
+    .experience-cntnt{
+        width: 50%;
+        padding: 0 0 0 50px;
+    }.experienceNumsDetail {
         padding-bottom: 20px;
     }
-    .process {
-        padding: 40px 50px 0 50px;
+    .experienceNumsDetail h3{
+        font-size: 55px;
+        padding: 20px 70px 10px 0;
     }
-    .process h3{
-        padding-top: 30px;
+    .process {
+        padding: 50px 60px 0 60px;
+    }.process .processList {
+        padding-right: 40px;
+        width: 50%;
+    }.reviews h2 {
+        padding: 60px 60px;
+    }.reviewSection {
+        padding: 0 60px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navigation .icons{
+        padding: 38px 10px 0 0;
+    }
+    .navigation p {
+        padding: 30px 0 0 50px;
+    }
+    .navigation ul {
+        padding-top: 39px;
+    }
+    .banner .banner-img {
+        width: 77%;
+        padding-right: 0;
+    }
+    .banner-txtbox h1 {
+        font-size: 32px;
+        line-height: 1.3;
+    }p {
+        font-size: 16px;
+    }.banner-txtbox h1, .banner-txtbox p {
+        line-height: 1.2;
+        max-width: 350px;
+    }
+    .banner .banner-txtbox {
+        top: 180px;
+        right: 47.8%;
+    }
+    .banner-txtbox .banner-txt {
+        padding: 30px 0 30px 20px;
+    }.banner-img::before {
+        width: 80px; height: 80px;
+    }.banner-img::after {
+        width: 120px;
+        height: 100px;
+    }.downArrow {
+        bottom: 60px;
+        left: 85.6%;
     }
     h2{
-        font-size: 24px;
-        line-height: 1.3;
+        font-size: 25px;
     }
     h3{
         font-size: 20px;
-    }p{
-        line-height: 1.2;
     }
-    .banner-txtbox h1, .banner-txtbox p {
-        line-height: 1.2;
+    p{
+        font-size: 15px;
     }
-    .process p{
-        width: 550px;
-        line-height: 1.3;
+    .lineWithHeading {
+        padding-top: 10px;
     }
-    .process .processList {
-        padding-right: 0px;
+    .line::after {
+        margin: 50px 30px 0 50px;
+    }.benefits-group {
+        padding: 20px 50px 20px 50px;
     }
-    .process figure {
-        margin: auto;
-        padding-left: 0px;
+    .benefitsHere .benefits-img {
+        width: 32px;
+        height: 32px;
+        margin-top: 7px;
     }
-    .marker {
-        box-shadow: 0 0 0 10px white;
-    }
-    .reviews h2{
-        padding: 0 0 20px 50px;
-    }
-    .reviews h3{
-        margin-right: 30px;
+    .benefits-txt {
+        width: 73%;
+        padding-left: 25px;
+    }.benefits-txt h3 {
         font-size: 20px;
-    }
-    .reviewSection{
-        padding: 0 50px 0 50px;
-    }
-    .reviewSec1{
-        margin-right: 20px;
-    }
-    .subscribeTitle h2{
-        padding-top: 50px;
-    }
-    .footerul a{
-        font-size: 13px;
-    }.footerIcons a {
-        font-size: 18px;
-    }
-    footer .footer-h4 {
-        font-size: 16px;
-    }
-    footer h3{
-        font-size: 17px;
-    }
-    footer h5{
-        max-width: 160px;
-    }
-} 
-@media (max-width: 700px){
-    .footerul a{
-        font-size: 13px;
-    }
-    .footerIcons a {
-        font-size: 20px;
-    }
-    footer .footer-h4 {
-        font-size: 17px;
-    }
-    footer h3{
-        font-size: 20px;
+        padding-bottom: 20px;
     }
     .experience {
-        padding: 0px 0px;
+        padding: 20px 50px 40px 50px;
+    }
+    .experience .experience-img {
+        min-width: 50%;
+    }.experience h2 {
+        padding: 0 0 10px 0;
     }
     .experience-cntnt{
-        padding: 0px 50px;
-    }.experience-button img{
-        margin-left: -5px;
+        width: 50%;
+        padding: 0 0 0 50px;
+    }.experienceNumsDetail {
+        padding-bottom: 10px;
     }
-    .process{
-        padding: 0px;
+    .experienceNumsDetail h3{
+        font-size: 35px;
+        padding: 20px 50px 10px 0;
+    }.experience button {
+        padding: 10px 27px;
     }
-    .processList {
-        padding: 40px 50px 0 50px;
-    }
-    .process p {
-        width: 440px;
-    }
-    .process img {
-        width: 100%;
-    }
-    .process-img{
-        padding-left: 0;
-    }
-    .reviews h2 {
-        padding: 0 0 20px 50px;
-    }
-} 
-@media (max-width: 660px){
-    .navigation{
-        height: 120px;
-        flex-direction: column;
-    }
-    .navigation ul li:first-child{
-        padding-left: 50px;
-    }
-    .navigation ul li a{
-        font-size: 18px;
-    }
-    .navigation .icons{
-        padding: 38px 0 0 550px;
-        position: relative;
-        top: -115px;
-    }
-    .icons .fas{
-        padding-right: 10px;
-    } 
-} 
-@media (max-width: 610px){
-    .navigation .icons{
-        padding: 38px 0 0 485px;
-    }
-    .footerul a{
-        font-size: 12px;
-    }.footerIcons a {
-        font-size: 15px;
-    }
-    footer .footer-h4 {
-        font-size: 15px;
-    }
-    footer h3{
-        font-size: 16px;
-    }
-    .process .process-img{
-        height: 100%;
-        width: 100%;
-    }
-    .experience-button img{
-        margin-left: 5px;
-    }.truck-img img, .badge-img img, .check-img img {
-        width: 25px;
-    }
-    
-}
-@media (max-width: 590px){
-   .navigation .icons{
-       padding: 38px 0 0 490px;
-   }
-   .benefits p {
-    width: 400px;
-   }
-   .process p {
-    width: 400px;
-}
-}
-@media (max-width: 560px){
-    .navigation p {
-        padding-left: 16px;
-    }
-    .navigation ul li:first-child {
-        padding-left: 16px;
-    }
-    .banner .banner-txtbox{
-        width: 100%;
-        left: 0px;
-        top: 510px;
-    }
-    .banner-txtbox .banner-txt{
-        padding: 25px 16px 33px 16px;
-        display: flex;
-        align-items: baseline;
-    } 
-    .banner-txtbox h1, .banner-txtbox p{
-        max-width: 1000px;
-    }
-    .benefits{
-        padding-top: 70px;
-    }.line::after {
-        margin: 95px 30px 0 16px;
-    }.benefits-group {
-        padding: 0 0 20px 16px;
-    }.experience-cntnt {
-        padding: 0px 16px;
-    }.experience .experience-img {
-        width: 400px;
-        height: 300px;
-    }.experience-button img{
-        margin-left: -10px;
-    }
-    .process h3 {
-        line-height: 1.4;
-        padding-top: 25px;
-    }
-    .processList {
-        padding: 40px 0px 0 16px;
-    }
-     .reviewSection {
-        padding: 0;
-        flex-direction: column;
-    }
-    .reviews h2 {
-        padding: 0 0 20px 16px;
-    }
-    .reviewSec1{
-        margin-bottom: 10px;
-    }
-    .reviewSec1 ,.reviewSec2{
-        margin-right: 0px;
-        width: 100%;
-    }
-    .subscribeButton{
-        flex-direction: column;
-        width: 70%;
-    }
-    .subscribeButton button{
-        padding: 10px 30px;
-        width: 140px;
-        margin: auto;
+    .process {
+        padding: 50px 50px 0 50px;
+    }.process .processList {
+        padding-right: 40px;
+        width: 50%;
     }
     .subscribeButton input {
         width: 200px;
-        margin-right: 0px;
-        margin-left: 0px;
         margin: auto;
-    }
-    .footercls{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .footerul{
-        padding: 0px 20px;
-    }
-}
-@media (max-width: 537px){
-   .navigation .icons{
-       padding: 38px 0 0 410px;
-   }
-   .benefits p {
-    width: 350px;
-   }
-   .process p {
-    width: 360px;
-    }
-    .process h2{
-        width: 300px ;
-    }
-    .experience-button img{
-        margin-left: -5px;
-    }
-}
-@media (max-width: 485px){
-    .benefits h2 {
-        padding: 80px 10px 35px 0;
-    }
-    .line::after {
-        margin: 115px 30px 0 16px;
-    }.experience-button img{
-        margin-left: 10px;
-    }
-}
-@media (max-width: 455px){
-    .navigation .icons{
-        padding: 38px 0 0 350px;
-    } 
-    .benefits-txt h3 {
-        padding-bottom: 10px;
-        font-size: 18px;
-    }
-    .benefits-group {
-        padding: 0px 0 20px 16px;
-    }.benefits h2 {
-        padding: 80px 10px 35px 16px;
-    }
-    .line::after {
-        display: none;
-    }
-    .benefits-txt p {
-        padding-bottom: 10px;
         font-size: 15px;
-        width: 290px;
     }
-    .marker {
-        width: 30px;
-        height: 30px;
-        font-size: 12px;
-        box-shadow: 0 0 0 10px white;
+    .reviews h2 {
+        padding: 20px 50px;
+    }.reviewSection {
+        padding: 0 20px;
+    }.subscribeTitle h2 {
+        padding-top: 50px;
     }
-    .timeline-item::before {
-        top: 40px;
-        left: 15px;
-    }
-    .process h3 {
-        padding-top: 40px;
-    }
-    .process p {
+    footer h5 {
+        font-size: 14px;
+        max-width: 200px;
+    }footer ul li a {
         font-size: 14px;
     }
-    .subscribeButton input {
-        width: 180px;
-        font-size: 14px;
-    }
-    .footerul:last-child, .footerul:nth-last-child(2){
-        padding-top: 40px;
+    .fab{
+        font-size: 20px;
     }
 }
-@media (max-width: 430px){
+@media only screen and (max-width: 767px) {
     .navigation{
         display: none;
     }
     .navbar {
         height: 60px;
-        padding: 10px 10px;
-        padding-left: 10px;
+        padding: 16px 16px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1086,238 +700,200 @@ footer ul li a:hover{
     .menu-toggle:checked ~ .dropdown-content {
        display: block;
     }
-    .banner .banner-txtbox{
-        top: 360px;
+    .banner h1 {
+        font-size: 24px;
     }
-    .banner h1{
-        font-size: 25px;
+    .banner .banner-img{
+        margin-left: 0;
+        padding-top: 0;
+        padding-right: 0;
+        z-index: -1;
+    }.banner .banner-txtbox{
+        width: 100%;
+        margin-top: -20px;
+        position: static;
     }
-    .banner p{
-        font-size: 14px;
+    .banner-txtbox .banner-txt{
+        padding: 25px 16px;
+        align-items: flex-start; 
+    } 
+    .banner-img::before{
+        display: none;
+    }.banner-img::after{
+        display: none;
     }
-    p{
+    .downArrow{
+        display: none;
+    }p{
         font-size: 14px;
     }
     h2{
-        font-size: 20px;
-    }
-    .benefits-txt p {
-        font-size: 14px;
-    }.benefits h2 {
-        padding: 20px 10px 35px 16px;
-    }
-    .experience p {
-        font-size: 14px;
-        line-height: 1.4;
+        font-size: 23px;
     }
     h3{
-        font-size: 18px;
-    }.reviews {
-        padding-top: 20px;
-    }
-    .process p {
-        width: 300px;
-    }
-    .reviews h2 {
-        padding: 16px 0 20px 16px;
-    }
-    .reviewSection p {
-        font-size: 14px;
-    }
-    .subscribeTitle h2 {
-        padding-top: 25px;
-    }
-    .subscribeButton p {
-        font-size: 14px;
-    }
-    .footercls{
-        padding: 50px 30px 20px 30px;
-        justify-content: center;
-    }
-    .footerul{
-        padding: 0px 20px;
-    }
-    .footerul:nth-last-child(3){
-        padding-top: 40px;
-    }
-}
-@media (max-width: 400px){
-    .navigation .icons{
-        padding-left: 280px;
-    } 
-    .benefits-txt p {
-        padding-bottom: 10px;
-        width: 250px;
-    }
-    .process p {
-        width: 250px;
-    }
-    .experience .experience-img {
-        width: 300px;
-        height: 260px;
-    }
-    .reviewSection p {
-        margin: 0 16px;
-        padding-left: 0px;
-    }
-    .reviewSection h3 {
-        margin: 0 16px;
-        padding-left: 0px;
-    }
-    footer h3 , footer h5{
-        margin: auto;
-        text-align: center;
-        width: 350px;
-    }
-    footer h5 {
-        padding-right: 0px;
-        max-width: 300px;
-    }
-    .footerul:nth-last-child(3), .footerul:nth-last-child(4){
-        padding: 40px 40px 10px 25px;
-    }
-    .footerIcons a:first-child{
-        padding-left: 20px;
-    }
-}
-@media (max-width: 376px){
-    .banner img {
-        height: 240px;
-    }
-    .banner .banner-txtbox{
-        top: 310px;
-    }
-    .benefits {
-        padding-top: 20px;
-    }
-    .benefits h2 {
-        padding: 30px 0 30px 16px;
-    }
-    .reviews h3 {
-        padding-bottom: 15px;
         font-size: 20px;
     }
-    .experienceNumsDetail h3 {
-        font-size: 30px;
-        padding: 10px 50px 10px 0;
-    }.experience-button img{
-        margin-left: 15px;
+    .banner-txtbox h1, .banner-txtbox p {
+        line-height: 1.2;
+        max-width: 680px;
     }
-    .process .process-img {
+    .lineWithHeading{
+        padding-top: 0;
+    }
+    .line::after {
+        display: none;
+    }
+    .benefits h2 {
+        padding: 40px 10px 20px 16px;
+    }
+    .benefits h3 {
+        font-size: 20px;
+        padding-bottom: 12px;
+    }.benefitsHere .benefits-img {
+        width: 28px;
+        height: 28px;
+        margin-top: 2px;
+    }
+    .benefitsHere {
+        padding: 10px 0;
+    }
+    .benefits-group {
+        padding: 0 0 20px 16px;
+        flex-direction: column;
+    }.benefits p {
+        padding-bottom: 10px;
+        max-width: 600px;
+    }.benefits-txt {
+        padding-left: 15px;
+    }
+   .experience {
+        padding: 0;
+    }.experience .experience-img {
+        width: 100%;
         height: 100%;
+    }
+    .experience-box{
+        flex-direction: column;
+    }.experience-cntnt {
+        padding: 10px 16px;
         width: 100%;
     }
-    .process h2 {
-        width: 270px;
+    .experience h2 {   
+        padding: 10px 20px 20px 0;
+
     }
-    .marker02::after {
-        bottom: -100px;
-        height: 95px;
-    }.footerul:nth-last-child(3), .footerul:nth-last-child(2){
-        padding-top: 40px;
+    .experience button {
+        margin-top: 0px;
+        padding: 5px 20px;
+        height: 37px;
+    }.experience-button button::after {
+        content: "\2192";
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        font-size: 40px;
+        transform: translateY(-56%);
+        font-family: sans-serif;
     }
-    .footerul:nth-last-child(3){
-        padding-right: 30px;
+    .experienceNumsDetail h3 {
+        padding: 10px 55px 0 0;
+        font-size: 30px;
     }
-    .footercls {
-        padding: 50px 20px 20px 0px;
-        justify-content: center;
-    }
-}
-@media (max-width: 345px){
-    .banner .banner-txtbox{
-        width: 100%;
-    } 
-    .banner-txtbox p{
-        font-size: 14.5px;
-    } 
-    .benefits h2{
-        padding-left: 10px;
-    }.benefits-group {
-        padding: 0px 0 20px 10px;
-    }.benefits-txt p {
-        font-size: 14px;
-    }
-    .experience {
-        padding: 0px 10px;
-    }
-    .experience-button img {
-        margin-left: 25px;
+    .experienceNumsDetail {
+        padding-bottom: 20px;
     }
     .process {
-        padding: 0 10px 0 10px;
-    }.process p {
-        width: 200px;
-        font-size: 14px;
+        padding: 40px 0 0 0;
+        flex-direction: column;
     }
-    .process .process-img {
-        padding-top: 15px;
+    .process h3{
+        padding-top: 30px;
     }
-    .reviews h2 {
-        padding: 0px 0 20px 10px;
+    .process p{
+        max-width: 700px;
+        line-height: 1.3;
+        padding-right: 16px;
+    }.process .process-img {
+        margin-top: 30px;
+        height: 100%;
+        width: 100%;
+    }.process .processList {
+        padding: 0 16px;
+        padding-right: 0;
+        width: 100%;
     }
-    .reviewSec1, .reviewSec2 {
+    .marker {
+        box-shadow: 0 0 0 10px white;
+    }.reviewSection {
+        padding: 0;
+        flex-direction: column;
+    }
+    .reviewSec1{
+        margin-bottom: 15px;
+    }
+    .reviewSec1 ,.reviewSec2{
         margin-right: 0px;
-        margin-left: 0px;
+        width: 100%;
+    }
+    .reviews h2{
+        padding: 0 0 20px 16px;
+    }
+    .reviews h3{
+        margin-right: 30px;
+        font-size: 20px;
+    }.reviewSection p ,.reviews h3{
+        margin-right: 16px;
+        padding-left: 16px;
     }.reviewSection p {
-        font-size: 14px;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
+    }
+    .reviewSecList-img h4 {
+        padding-top: 18px;
+    }
+    .reviewSecList-img h6, .reviewSecList-img h4 {
+        left: 30%;
     }
     .reviewSecList img {
-        width: 40px;
         margin: 16px;
-    }.reviewSecList-img h6, .reviewSecList-img h4 {
-        left: 25%;
-        top: -10px;
     }
-    .reviewSecList-img h6 {
-        padding-bottom: 20px;
+    .subscribeTitle h2{
+        padding-top: 50px;
     }
-    footer{
-        padding-bottom: 20px;
+    .subscribeButton{
+        flex-direction: column;
+        width: 70%;
+    }
+    .subscribeButton button{
+        padding: 10px 30px;
+        width: 140px;
+        margin: auto;
+    }
+    .subscribeButton input {
+        width: 200px;
+        padding-bottom: 15px;
+        margin: auto;
+        font-size: 16px;
     }
     .footercls{
-        flex-direction: column;
-        align-items: center;
-        padding: 0px 0px 20px 0px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 16px;
+    }   
+    .footerul{
+        padding: 0;
+    }
+    .footerul a{
+        font-size: 13px;
+    }.footerIcons a {
+        font-size: 18px;
     }
     footer h3{
-        padding-top: 40px;
-        padding-bottom: 10px;
+        font-size: 17px;
     }
-    footer h3 , footer h5{
-        margin: 0 auto;
-        text-align: center;
-        width: 270px; 
-        padding-right: 0px;
+    footer h3, .footerul h4{
+        padding-top: 30px;
     }
-    .footerul:nth-last-child(3), .footerul:nth-last-child(4) {
-        padding: 0px;
+    footer h5{
+        max-width: 160px;
     }
-    footer li{
-        padding: 3px 0px;
-        text-align: center;
-    }
-    footer .footer-h4{
-        padding: 20px 0 0 0;
-        text-align: center;
-    }
-    .footerul:nth-last-child(3), .footerul:nth-last-child(2) {
-        padding-top: 0px;
-    }
-    .footerul:last-child{
-        padding-top: 0px;
-    }
-    .footerIcons a{
-        text-align: center;
-    }
-    .footerul{
-        padding: 0 0;
-    }
-    .fab{
-        padding: 20px 15px 0 0;
-    }
-    .fa-instagram{
-        padding-left: 20px;
-    }   
 }
