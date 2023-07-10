@@ -344,7 +344,6 @@ h3{
     margin-right: 30px;
 }
 .reviewSection p{
-    font-size: 18px;
     margin-right: 30px;
 }
 .reviewSecList{
@@ -429,6 +428,7 @@ footer{
     display: flex;
     padding: 90px 0;
     justify-content: space-evenly;
+    gap: 10px;
 }
 footer h3{
     padding-bottom: 20px;
