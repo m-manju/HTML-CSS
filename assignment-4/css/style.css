@@ -206,7 +206,7 @@ h3{
     display: flex;
 }
 .experience .experience-img{
-    width: 40%;
+    width: clamp(350px, 50% ,500px);
 }
 .experience img{
     width: 100%;
