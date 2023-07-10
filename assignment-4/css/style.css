@@ -206,10 +206,11 @@ h3{
     display: flex;
 }
 .experience .experience-img{
-    width: 50%;
+    width: 40%;
 }
 .experience img{
     width: 100%;
+    object-fit: cover;
 }
 .experience-cntnt{
     width: 50%;
@@ -503,9 +504,6 @@ footer ul li a:hover{
         padding: 30px 60px 20px 60px;
     }.experience {
         padding: 80px 60px 80px 60px;
-    }
-    .experience .experience-img {
-        min-width: 50%;
     }.experience h2 {
         padding: 0 100px 20px 0;
     }
@@ -530,7 +528,7 @@ footer ul li a:hover{
         padding: 0 60px;
     }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 769px) and (max-width: 1023px) {
     .navigation .icons{
         padding: 38px 10px 0 0;
     }
@@ -599,9 +597,6 @@ footer ul li a:hover{
     }
     .experience {
         padding: 20px 50px 40px 50px;
-    }
-    .experience .experience-img {
-        min-width: 50%;
     }.experience h2 {
         padding: 0 0 10px 0;
     }
@@ -645,7 +640,7 @@ footer ul li a:hover{
         font-size: 20px;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .navigation{
         display: none;
     }
