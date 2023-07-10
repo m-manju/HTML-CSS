@@ -334,7 +334,7 @@ h3{
 }
 .reviews h3{
     padding-bottom: 15px;
-    font-size: 26px;
+    padding-right: 16px;
 }
 .reviewSection{
     display: flex;
