@@ -212,7 +212,6 @@ h3{
     width: 100%;
 }
 .experience-cntnt{
-    padding: 10px 0 0 70px;
     width: 50%;
 }
 .experience h2{
@@ -228,6 +227,9 @@ h3{
     font-size: 70px;
     color: #5a6e79;
     padding: 30px 70px 10px 0 ;
+}
+.experience-cntnt p{
+    max-width: 500px;
 }
 .experience-box figure{
     margin: auto;
@@ -643,7 +645,7 @@ footer ul li a:hover{
         font-size: 20px;
     }
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
     .navigation{
         display: none;
     }
@@ -786,13 +788,10 @@ footer ul li a:hover{
         padding: 5px 20px;
         height: 37px;
     }.experience-button button::after {
-        content: "\2192";
-        position: absolute;
         top: 50%;
         left: 90%;
         font-size: 40px;
         transform: translateY(-56%);
-        font-family: sans-serif;
     }
     .experienceNumsDetail h3 {
         padding: 10px 55px 0 0;
@@ -897,7 +896,7 @@ footer ul li a:hover{
         max-width: 160px;
     }
 }
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     h2{
         font-size: 19px;
         line-height: 1.3;
