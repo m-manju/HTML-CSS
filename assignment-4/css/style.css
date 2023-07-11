@@ -776,7 +776,9 @@ footer ul li a:hover{
     }
     .experience h2 {   
         padding: 10px 20px 20px 0;
-
+    }
+    .experience-cntnt p {
+        max-width: 700px;
     }
     .experience button {
         margin-top: 0px;
