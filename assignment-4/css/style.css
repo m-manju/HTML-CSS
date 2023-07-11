@@ -870,7 +870,7 @@ footer ul li a:hover{
     }
     .footercls{
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-between;
         padding: 20px 16px;
     }   
     .footerul{
@@ -942,5 +942,7 @@ footer ul li a:hover{
     }
     .subscribeTitle h2 {
         padding-top: 20px;
+    }.footercls{
+        justify-content: flex-start;
     }
 }
