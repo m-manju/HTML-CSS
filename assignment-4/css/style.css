@@ -892,6 +892,9 @@ footer ul li a:hover{
     }
 }
 @media (max-width: 600px) {
+    .banner .banner-img {
+        margin: 0;
+    }
     h2{
         font-size: 19px;
         line-height: 1.3;
@@ -901,6 +904,8 @@ footer ul li a:hover{
     }
     .benefits h2{
         padding: 20px 10px 20px 16px;
+    }.benefitsHere {
+        padding: 0;
     }
     .benefitsHere .benefits-img {
         width: 23px;
