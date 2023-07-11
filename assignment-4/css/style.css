@@ -870,11 +870,11 @@ footer ul li a:hover{
     }
     .footercls{
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding: 20px 16px;
     }   
     .footerul{
-        padding: 0;
+        padding-right: 10px;
     }
     .footerul a{
         font-size: 13px;
